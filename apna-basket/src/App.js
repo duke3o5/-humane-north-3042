@@ -1,9 +1,10 @@
 import './App.css';
+import { Admin } from './Pages/Admin';
 
 function App() {
   return (
     <div className="App">
-      <h1>Apna Basket</h1>
+      <Admin/>
     </div>
   );
 }
