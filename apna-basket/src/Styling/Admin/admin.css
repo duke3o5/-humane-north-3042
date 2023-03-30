@@ -1,0 +1,9 @@
+.adminSideBar{
+    /* border: 1px solid red; */
+}
+
+.side-Table{
+    display: flex;
+    /* border: 1px solid red; */
+    /* grid-template-columns: 20%, 70%; */
+}
