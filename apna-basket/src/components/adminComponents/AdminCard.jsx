@@ -1,4 +1,4 @@
-import { Button, Td, Tr } from "@chakra-ui/react";
+import { Button, td, Tr } from "@chakra-ui/react";
 import React from "react";
 
 export const AdminCard = ({
@@ -12,31 +12,31 @@ export const AdminCard = ({
 }) => {
   return (
     <>
-      <Tr>
-        <Td>{id + 1}</Td>
-        <Td>
+      <tr>
+        <td>{id + 1}</td>
+        <td>
           <img width={"40%"} src={Image} alt={name} />
-        </Td>
-        <Td
+        </td>
+        <td
           style={{
             whiteSpace: "normal",
             wordWrap: "break-word",
           }}
         >
           {name}
-        </Td>
-        <Td>{category}</Td>
-        <Td>{Price}</Td>
-        <Td
+        </td>
+        <td>{category}</td>
+        <td>{Price}</td>
+        <td
           style={{
             whiteSpace: "normal",
             wordWrap: "break-word",
           }}
         >
           {Weight}
-        </Td>
-        <Td>{rating}</Td>
-        <Button
+        </td>
+        <td>{rating}</td>
+        <button
           style={{
             whiteSpace: "normal",
             wordWrap: "break-word",
@@ -46,8 +46,8 @@ export const AdminCard = ({
           }}
         >
           Edit
-        </Button>
-      </Tr>
+        </button>
+      </tr>
     </>
   );
 };
