@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../style.scss";
 
+// Created new component
+
 const imageSlide = [
   {
     url: `https://www.bigbasket.com/media/uploads/banner_images/YXHP144_hp_fom_m_bbpl-staples_460_270323_Bangalore.jpg`, id: 1
@@ -35,20 +37,20 @@ const HomePageSlider = () => {
   } , [currentState])
 
 
-  const handleChangeSlider = (e) => {
-    console.log(e)
-    setCurrentState(currentState + 1)
-  }
+//   const handleChangeSlider = (e) => {
+//     console.log(e)
+//     setCurrentState(currentState + 1)
+//   }
 
   return (
     <div className="image-slider">
       <div style={bgImageStyle}></div>
       <div className="description">
-        <div onClick={(e) => handleChangeSlider(e.target.value)} value={1} className="des-ch">
+        <div className="des-ch">
           <h5>Offer On</h5>
           <p>Staples</p>
         </div>
-        <div onClick={(e) => handleChangeSlider(e.target.value)} value={2} className="des-ch">
+        <div className="des-ch">
           <h5>Fresho</h5>
           <p>Meat</p>
         </div>
