@@ -1,6 +1,6 @@
 import React from 'react'
 import HomePageSlider from '../components/HomePageSlider'
-import '../style.scss'
+// import '../style.scss'
 
 export const HomePage = () => {
   return (
