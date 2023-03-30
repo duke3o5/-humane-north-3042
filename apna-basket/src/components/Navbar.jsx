@@ -10,7 +10,7 @@ import {BsTagFill} from 'react-icons/bs'
 import { Link } from "react-router-dom";
 import Cart from "../Images/Cart.png";
 import logo from "../Images/main_logo.jpg";
-import offerTag from "../Images/offerTag.png"
+// import offerTag from "../Images/offerTag.png"
 import "../style.scss";
 
 export const Navbar = () => {

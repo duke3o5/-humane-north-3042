@@ -6,9 +6,9 @@ import { HomePage } from './Pages/HomePage';
 function App() {
   return (
     <div className="App">
-      <Admin/>
+      {/* <Admin/> */}
       <Navbar />
-      <HomePage />
+      {/* <HomePage /> */}
     </div>
   );
 }
