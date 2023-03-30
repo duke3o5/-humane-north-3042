@@ -10,7 +10,7 @@ function App() {
       <h1>Apna Basket</h1>
       <FruitandVeg/>
       {/* <Admin/> */}
-      <Navbar />
+      {/* <Navbar /> */}
       {/* <HomePage /> */}
     </div>
   );
