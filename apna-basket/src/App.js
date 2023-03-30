@@ -7,11 +7,12 @@ import { HomePage } from './Pages/HomePage';
 function App() {
   return (
     <div className="App">
-      <h1>Apna Basket</h1>
-      <FruitandVeg/>
+      {/* <h1>Apna Basket</h1> */}
+      {/* <FruitandVeg/> */}
       {/* <Admin/> */}
       <Navbar />
-      {/* <HomePage /> */}
+      <HomePage />
+      {/* <Admin/> */}
     </div>
   );
 }
