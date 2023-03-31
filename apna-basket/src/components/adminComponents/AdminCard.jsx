@@ -1,5 +1,5 @@
-import { Button, td, Tr } from "@chakra-ui/react";
 import React from "react";
+import "../../Styling/Admin/admin.css";
 
 export const AdminCard = ({
   Image,
@@ -11,43 +11,31 @@ export const AdminCard = ({
   id,
 }) => {
   return (
-    <>
-      <tr>
-        <td>{id + 1}</td>
-        <td>
-          <img width={"40%"} src={Image} alt={name} />
-        </td>
-        <td
-          style={{
-            whiteSpace: "normal",
-            wordWrap: "break-word",
-          }}
-        >
-          {name}
-        </td>
-        <td>{category}</td>
-        <td>{Price}</td>
-        <td
-          style={{
-            whiteSpace: "normal",
-            wordWrap: "break-word",
-          }}
-        >
-          {Weight}
-        </td>
-        <td>{rating}</td>
-        <button
-          style={{
-            whiteSpace: "normal",
-            wordWrap: "break-word",
-            color: "white",
-            alignItems: "center",
-            backgroundColor: "green",
-          }}
-        >
-          Edit
-        </button>
-      </tr>
-    </>
+    <div>
+      <div className="ProductCard">
+        <img src={Image} alt={name} />
+        <div className="prodctInsideDiv">
+          <h3>{name}</h3>
+          <p>
+            <span className="spanHeading">Category : </span>
+            {category}
+          </p>
+          <p>
+            <span className="spanHeading">Price :</span> {Price} RS.
+          </p>
+          {Weight && (
+            <p>
+              <span className="spanHeading"> Weight :</span> {Weight}
+            </p>
+          )}
+          <div className="buttonratingDiv">
+            <p>
+              <span className="spanHeading">Rating :</span> {rating}
+            </p>
+            <button>Edit Item</button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };

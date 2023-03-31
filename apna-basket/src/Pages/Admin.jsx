@@ -1,13 +1,12 @@
 import React from 'react'
-import { AdminAddDataForm } from '../components/adminComponents/AdminAddDataForm'
-import { AdminCard } from '../components/adminComponents/AdminCard'
-import { AdminDataList } from '../components/adminComponents/AdminDataList'
+import { AdminMainRoutes } from '../components/adminComponents/AdminMainRoutes'
+import { AdminNavbar } from '../components/adminComponents/AdminNavbar'
 
 export const Admin = () => {
   return (
     <div>
-      {/* <AdminAddDataForm/> */}
-      <AdminDataList/>
+      <AdminNavbar/>
+      <AdminMainRoutes/>
     </div>
   )
 }

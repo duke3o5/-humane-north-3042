@@ -9,9 +9,9 @@ function App() {
     <div className="App">
       {/* <h1>Apna Basket</h1> */}
       {/* <FruitandVeg/> */}
-      {/* <Admin/> */}
-      <Navbar />
-      <HomePage />
+      <Admin/>
+      {/* <Navbar /> */}
+      {/* <HomePage /> */}
       {/* <Admin/> */}
     </div>
   );
