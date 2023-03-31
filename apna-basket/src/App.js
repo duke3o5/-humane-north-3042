@@ -7,10 +7,9 @@ import { HomePage } from './Pages/HomePage';
 function App() {
   return (
     <div className="App">
-      <h1>Apna Basket</h1>
+      <Navbar />
       <FruitandVeg/>
       {/* <Admin/> */}
-      <Navbar />
       {/* <HomePage /> */}
     </div>
   );
