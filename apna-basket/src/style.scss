@@ -1,11 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+// * {
+//   margin: 0;
+//   padding: 0;
+// }
 // Navbar
 .nav-main {
   max-width: 100%;
   height: auto;
+  background-color: white;
+  position: sticky;
+  top: 0px;
   .container-top {
     width: 77%;
     height: 85px;
@@ -37,6 +40,7 @@
         .phone {
           display: flex;
           gap: 5px;
+          align-items: center;
           p {
             font-size: 13.5px;
             margin-top: 2px;
@@ -48,6 +52,7 @@
         .address {
           display: flex;
           gap: 5px;
+          align-items: center;
           &:hover {
             color: #84c225;
           }
@@ -66,6 +71,7 @@
           }
         }
         .login-signup-main {
+          align-items: center;
           display: flex;
           margin-right: 10px;
           gap: 5px;
@@ -98,23 +104,31 @@
           input {
             width: 93.5%;
             height: 28px;
+            font-size: 14px;
             margin-top: 15px;
+            padding-left: 10px;
+            margin-left: 3px;
             border-right: none;
             border-bottom: 1px solid grey;
             border-top: 1px solid grey;
             border-left: 1px solid grey;
             &::placeholder {
               font-size: 13.5px;
-              padding: 10px;
+              padding: auto 10px;
               padding-top: 5px;
+            }
+            &:focus{
+              outline: none;
             }
           }
           .search-icon-div {
             background-color: #84c225;
-            width: 37px;
-            height: 30px;
+            border: 1.5px solid #669521;
+            width: 35px;
+            height: 28px;
             color: white;
             margin-top: 15px;
+            margin-left: -2px;
             &:hover {
               background-color: #6aa019;
               transition: 0.3s;
@@ -210,6 +224,51 @@
       }
     }
   }
+  @media only screen and (max-width: 768px) {
+    .right-top-login {
+      display: none;
+    }
+  
+    .search-box input {
+      width: 100%;
+      padding-right: 40px;
+    }
+  
+    .add-to-cart img {
+      display: none;
+    }
+    
+    .add-to-cart p {
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+    }
+    
+    .search-and-cart {
+      justify-content: flex-end;
+    }
+  }
+  // Bottom Section
+  @media only screen and (max-width: 768px) {
+    .bottom-nav-left h4 {
+      font-size: 16px;
+      margin-right: 5px;
+    }
+  
+    .category-dropdown {
+      font-size: 20px;
+    }
+  
+    .bottom-nav-right p {
+      font-size: 12px;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .offer-tag-icon {
+      font-size: 20px;
+    }
+  } 
 }
 
 // Home Page Slider
@@ -249,7 +308,14 @@
   }
 }
 
+
+// =================================================================================================================== //
+// =================================================================================================================== //
+// =================================================================================================================== //
 // Home Page CSS
+// =================================================================================================================== //
+// =================================================================================================================== //
+// =================================================================================================================== //
 .home-main {
   max-width: 100%;
   height: auto;
@@ -262,16 +328,18 @@
       height: 436px;
       // border: 1px solid red;
     }
+    // Item Offer Section
     .item-offers {
       width: 77%;
       height: 150px;
-      display: flex;
+      display: grid;
       justify-content: space-between;
+      grid-template-columns: repeat(6, 1fr);
       align-items: center;
       margin: auto;
       // border: 1px solid red;
       .item-offers-ch {
-        width: 15.6%;
+        width: 95%;
         height: 50px;
         border-radius: 9px;
         // border: 1px solid red;
@@ -281,6 +349,7 @@
         }
       }
     }
+    // Bank Card Section // ===>
     .bank-offers {
       width: 77%;
       height: auto;
@@ -305,8 +374,7 @@
           width: 24.2%;
           height: auto;
           &:hover {
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-              rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
           }
         }
       }
@@ -326,9 +394,1739 @@
       }
     }
   }
-}
+  // Most Popular Section // ===>
+  .most-popular {
+    width: 77%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    // border: 1px solid red;
+    .popular-heading {
+      font-size: 28px;
+    }
+    .popular-cards {
+      width: 100%;
+      height: auto;
+      display: flex;
+      margin: 20px auto;
+      box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+      justify-content: space-between;
+      // border: 1px solid blue;
+      border-top: 1.5px solid rgb(214, 211, 211);
+      .popular-cards-ch {
+        margin-top: 15px;
+        width: 24.2%;
+        height: auto;
+        border: 1px solid rgb(211, 208, 208);
+        &:hover {
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+      }
+    }
+  }
+  // Top Offer Section // ===>
+  .top-offer {
+    width: 77%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    // border: 1px solid red;
+    .top-offer-heading {
+      font-size: 28px;
+    }
+    .top-offer-cards {
+      width: 100%;
+      height: auto;
+      display: flex;
+      margin: 20px auto;
+      box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+      justify-content: space-between;
+      // border: 1px solid blue;
+      border-top: 1.5px solid rgb(214, 211, 211);
+      .top-offer-cards-ch {
+        margin-top: 15px;
+        width: 24.2%;
+        height: auto;
+        border: 1px solid rgb(211, 208, 208);
+        &:hover {
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+      }
+    }
+  }
+  // Fruits and Vegetables
+  .fruits {
+    width: 77%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    // border: 1px solid red;
+    .fruits-heading {
+      font-size: 28px;
+    }
+    .fruits-cards {
+      width: 100%;
+      height: auto;
+      display: flex;
+      margin: 20px auto;
+      box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+      justify-content: space-between;
+      // border: 1px solid blue;
+      border-top: 1.5px solid rgb(214, 211, 211);
+      .fruits-cards-ch {
+        margin-top: 15px;
+        width: 16%;
+        height: auto;
+        border: 1px solid rgb(211, 208, 208);
+        &:hover {
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+      }
+    }
+  }
+  // Daily Staples
+  .daily-staples {
+    width: 77%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    // border: 1px solid red;
+    .daily-staples-heading {
+      font-size: 28px;
+    }
+    .daily-staples-cards {
+      width: 100%;
+      height: auto;
+      display: flex;
+      margin: 20px auto;
+      box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+      justify-content: space-between;
+      // border: 1px solid blue;
+      border-top: 1.5px solid rgb(214, 211, 211);
+      .daily-staples-cards-ch {
+        margin-top: 15px;
+        width: 16%;
+        height: auto;
+        border: 1px solid rgb(211, 208, 208);
+        &:hover {
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+      }
+    }
+  }
+  // Beverages
+  .beverages {
+    width: 77%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    // border: 1px solid red;
+    .beverages-heading {
+      font-size: 28px;
+    }
+    .beverages-cards {
+      width: 100%;
+      height: auto;
+      display: flex;
+      margin: 20px auto;
+      box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+      justify-content: space-between;
+      // border: 1px solid blue;
+      border-top: 1.5px solid rgb(214, 211, 211);
+      .beverages-cards-ch {
+        margin-top: 15px;
+        width: 16%;
+        height: auto;
+        border: 1px solid rgb(211, 208, 208);
+        &:hover {
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+      }
+    }
+  }
+  // Snacks Store
+  .snacks {
+    width: 77%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    // border: 1px solid red;
+    .snacks-heading {
+      font-size: 28px;
+    }
+    .snacks-cards {
+      width: 100%;
+      height: auto;
+      display: flex;
+      margin: 20px auto;
+      box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+      justify-content: space-between;
+      // border: 1px solid blue;
+      border-top: 1.5px solid rgb(214, 211, 211);
+      .snacks-cards-ch {
+        margin-top: 15px;
+        width: 24.2%;
+        height: auto;
+        border: 1px solid rgb(211, 208, 208);
+        &:hover {
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+      }
+    }
+  }
+  // Household
+  .household {
+    width: 77%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    // border: 1px solid red;
+    .household-heading {
+      font-size: 28px;
+    }
+    .household-cards {
+      width: 100%;
+      height: auto;
+      display: flex;
+      margin: 20px auto;
+      box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+      justify-content: space-between;
+      // border: 1px solid blue;
+      border-top: 1.5px solid rgb(214, 211, 211);
+      .household-cards-ch {
+        margin-top: 15px;
+        width: 24.2%;
+        height: auto;
+        border: 1px solid rgb(211, 208, 208);
+        &:hover {
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+      }
+    }
+  }
+  // Beauty and Hygine
+  .beauty {
+    width: 77%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    // border: 1px solid red;
+    .beauty-heading {
+      font-size: 28px;
+    }
+    .beauty-cards {
+      width: 100%;
+      height: auto;
+      display: flex;
+      margin: 20px auto;
+      box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+      justify-content: space-between;
+      // border: 1px solid blue;
+      border-top: 1.5px solid rgb(214, 211, 211);
+      .beauty-cards-ch {
+        margin-top: 15px;
+        width: 16%;
+        height: auto;
+        border: 1px solid rgb(211, 208, 208);
+        &:hover {
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+      }
+    }
+  }
+  //Home and Kitchen
+  .kitchen {
+    width: 77%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    // border: 1px solid red;
+    .kitchen-heading {
+      font-size: 28px;
+    }
+    .kitchen-cards {
+      width: 100%;
+      height: auto;
+      display: flex;
+      margin: 20px auto;
+      box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+      justify-content: space-between;
+      // border: 1px solid blue;
+      border-top: 1.5px solid rgb(214, 211, 211);
+      .kitchen-cards-ch {
+        margin-top: 15px;
+        width: 16%;
+        height: auto;
+        border: 1px solid rgb(211, 208, 208);
+        &:hover {
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+      }
+    }
+  }
+  // Image Slider Bottom
+  .image-slider-bottom {
+    width: 87.8%;
+    height: 436px;
+    margin: 20px auto;
+  }
+  // Brand Store
+  .brand-store {
+    width: 77%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    // border: 1px solid red;
+    .brand-store-heading {
+      font-size: 28px;
+      margin-top: 25px;
+    }
+    .brand-store-cards {
+      width: 100%;
+      height: auto;
+      display: flex;
+      margin: 20px auto;
+      box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+      justify-content: space-between;
+      // border: 1px solid blue;
+      border-top: 1.5px solid rgb(214, 211, 211);
+      .brand-store-cards-ch {
+        margin-top: 15px;
+        width: 16%;
+        height: auto;
+        border: 1px solid rgb(211, 208, 208);
+        &:hover {
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+      }
+    }
+  }
+  // Bottom Image
+  .bottom-img{
+    margin: 40px auto;
+    width: 77%;
+    height: auto;
+    // border: 1px solid red;
+    img{
+      width: 100%;
+    }
 
+  }
+  // Bottom Disclaimer
+  .disclaimer-bottom{
+    width: 77%;
+    margin: 40px auto;
+    height: auto;
+    border: 1px solid rgb(211, 208, 208);
+    .disclaimer-ch{
+      width: 97%;
+      height: auto;
+      padding-bottom: 20px;
+      margin: auto;
+      h2{
+        font-size: 30px;
+        margin-top: 15px;
+      }
+      p{
+        margin-top: 10px;
+        font-size: 14px;
+        span{
+          color: #6aa019;
+          font-weight: 600;
+        }
+      }
+      button{
+        margin-top: 15px;
+        width: 110px;
+        height: 30px;
+        font-size: 15px;
+        border: 1px solid rgb(142, 142, 142);
+      }
+    }
+
+  }
+
+}
+// =================================================================================================================== //
+// =================================================================================================================== //
+// media query for home page large screen
+// =================================================================================================================== //
+// =================================================================================================================== //
+
+@media only screen and (min-width: 1201px) {
+  .home-main {
+    max-width: 100%;
+    height: auto;
+    .container {
+      width: 100%;
+      height: auto;
+      margin: auto;
+      .image-slider-top {
+        width: 100%;
+        height: 436px;
+        // border: 1px solid red;
+      }
+      // Item Offer Section
+      .item-offers {
+        width: 77%;
+        height: 150px;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(6, 1fr);
+        align-items: center;
+        margin: auto;
+        // border: 1px solid red;
+        .item-offers-ch {
+          width: 95%;
+          height: 50px;
+          border-radius: 9px;
+          // border: 1px solid red;
+          img {
+            width: 100%;
+            overflow: hidden;
+          }
+        }
+      }
+      // Bank Card Section // ===>
+      .bank-offers {
+        width: 77%;
+        height: auto;
+        margin: auto;
+        text-align: center;
+        // border: 1px solid red;
+        .bank-heading {
+          font-size: 28px;
+        }
+        .bank-cards {
+          width: 100%;
+          height: auto;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          margin: 20px auto;
+          box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+            rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+          justify-content: space-between;
+          // border: 1px solid blue;
+          border-top: 1.5px solid rgb(214, 211, 211);
+          .bank-cards-ch {
+            margin-top: 15px;
+            width: 96%;
+            height: auto;
+            &:hover {
+              box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            }
+          }
+        }
+      }
+  
+      .best-seller {
+        width: 77%;
+        height: auto;
+        margin: 50px auto;
+        text-align: center;
+        border: 1px solid red;
+        .best-seller-carousal{
+          width: 100%;
+          height: 360px;
+          margin: 20px auto;
+          border: 1px solid blue;
+        }
+      }
+    }
+    // Most Popular Section // ===>
+    .most-popular {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .popular-heading {
+        font-size: 28px;
+      }
+      .popular-cards {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .popular-cards-ch {
+          margin-top: 15px;
+          width: 94%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Top Offer Section // ===>
+    .top-offer {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .top-offer-heading {
+        font-size: 28px;
+      }
+      .top-offer-cards {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .top-offer-cards-ch {
+          margin-top: 15px;
+          width: 94%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Fruits and Vegetables
+    .fruits {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .fruits-heading {
+        font-size: 28px;
+      }
+      .fruits-cards {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .fruits-cards-ch {
+          margin-top: 15px;
+          width: 94%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Daily Staples
+    .daily-staples {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .daily-staples-heading {
+        font-size: 28px;
+      }
+      .daily-staples-cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .daily-staples-cards-ch {
+          margin-top: 15px;
+          width: 16%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Beverages
+    .beverages {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .beverages-heading {
+        font-size: 28px;
+      }
+      .beverages-cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .beverages-cards-ch {
+          margin-top: 15px;
+          width: 16%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Snacks Store
+    .snacks {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .snacks-heading {
+        font-size: 28px;
+      }
+      .snacks-cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .snacks-cards-ch {
+          margin-top: 15px;
+          width: 24.2%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Household
+    .household {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .household-heading {
+        font-size: 28px;
+      }
+      .household-cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .household-cards-ch {
+          margin-top: 15px;
+          width: 24.2%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Beauty and Hygine
+    .beauty {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .beauty-heading {
+        font-size: 28px;
+      }
+      .beauty-cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .beauty-cards-ch {
+          margin-top: 15px;
+          width: 16%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    //Home and Kitchen
+    .kitchen {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .kitchen-heading {
+        font-size: 28px;
+      }
+      .kitchen-cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .kitchen-cards-ch {
+          margin-top: 15px;
+          width: 16%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Image Slider Bottom
+    .image-slider-bottom {
+      width: 87.8%;
+      height: 436px;
+      margin: 20px auto;
+    }
+    // Brand Store
+    .brand-store {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .brand-store-heading {
+        font-size: 28px;
+        margin-top: 25px;
+      }
+      .brand-store-cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .brand-store-cards-ch {
+          margin-top: 15px;
+          width: 16%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Bottom Image
+    .bottom-img{
+      margin: 40px auto;
+      width: 77%;
+      height: auto;
+      // border: 1px solid red;
+      img{
+        width: 100%;
+      }
+  
+    }
+    // Bottom Disclaimer
+    .disclaimer-bottom{
+      width: 77%;
+      margin: 40px auto;
+      height: auto;
+      border: 1px solid rgb(211, 208, 208);
+      .disclaimer-ch{
+        width: 97%;
+        height: auto;
+        padding-bottom: 20px;
+        margin: auto;
+        h2{
+          font-size: 30px;
+          margin-top: 15px;
+        }
+        p{
+          margin-top: 10px;
+          font-size: 14px;
+          span{
+            color: #6aa019;
+            font-weight: 600;
+          }
+        }
+        button{
+          margin-top: 15px;
+          width: 110px;
+          height: 30px;
+          font-size: 15px;
+          border: 1px solid rgb(142, 142, 142);
+        }
+      }
+  
+    }
+  
+  }
+
+}
+// ======================================================================================================================== //
+// ======================================================================================================================== //
+// Medium Screen Media Query
+// ======================================================================================================================== //
+// ======================================================================================================================== //
+
+@media only screen and (min-width: 720px) and (max-width: 1200px){
+
+  .home-main {
+    max-width: 100%;
+    height: auto;
+    .container {
+      width: 100%;
+      height: auto;
+      margin: auto;
+      .image-slider-top {
+        width: 100%;
+        height: 436px;
+        // border: 1px solid red;
+      }
+      // Item Offer Section
+      .item-offers {
+        width: 77%;
+        height: 150px;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        margin: auto;
+        // border: 1px solid red;
+        .item-offers-ch {
+          width: 95%;
+          height: 50px;
+          border-radius: 9px;
+          // border: 1px solid red;
+          img {
+            width: 100%;
+            overflow: hidden;
+          }
+        }
+      }
+      // Bank Card Section // ===>
+      .bank-offers {
+        width: 77%;
+        height: auto;
+        margin: auto;
+        text-align: center;
+        // border: 1px solid red;
+        .bank-heading {
+          font-size: 28px;
+        }
+        .bank-cards {
+          width: 100%;
+          height: auto;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          margin: 20px auto;
+          box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+            rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+          justify-content: space-between;
+          // border: 1px solid blue;
+          border-top: 1.5px solid rgb(214, 211, 211);
+          .bank-cards-ch {
+            margin-top: 15px;
+            width: 94%;
+            height: auto;
+            &:hover {
+              box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            }
+          }
+        }
+      }
+  
+      .best-seller {
+        width: 77%;
+        height: auto;
+        margin: 50px auto;
+        text-align: center;
+        border: 1px solid red;
+        .best-seller-carousal{
+          width: 100%;
+          height: 360px;
+          margin: 20px auto;
+          border: 1px solid blue;
+        }
+      }
+    }
+    // Most Popular Section // ===>
+    .most-popular {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .popular-heading {
+        font-size: 28px;
+      }
+      .popular-cards {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .popular-cards-ch {
+          margin-top: 15px;
+          width: 94%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Top Offer Section // ===>
+    .top-offer {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .top-offer-heading {
+        font-size: 28px;
+      }
+      .top-offer-cards {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .top-offer-cards-ch {
+          margin-top: 15px;
+          width: 94%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Fruits and Vegetables
+    .fruits {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .fruits-heading {
+        font-size: 28px;
+      }
+      .fruits-cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .fruits-cards-ch {
+          margin-top: 15px;
+          width: 16%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Daily Staples
+    .daily-staples {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .daily-staples-heading {
+        font-size: 28px;
+      }
+      .daily-staples-cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .daily-staples-cards-ch {
+          margin-top: 15px;
+          width: 16%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Beverages
+    .beverages {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .beverages-heading {
+        font-size: 28px;
+      }
+      .beverages-cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .beverages-cards-ch {
+          margin-top: 15px;
+          width: 16%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Snacks Store
+    .snacks {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .snacks-heading {
+        font-size: 28px;
+      }
+      .snacks-cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .snacks-cards-ch {
+          margin-top: 15px;
+          width: 24.2%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Household
+    .household {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .household-heading {
+        font-size: 28px;
+      }
+      .household-cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .household-cards-ch {
+          margin-top: 15px;
+          width: 24.2%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Beauty and Hygine
+    .beauty {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .beauty-heading {
+        font-size: 28px;
+      }
+      .beauty-cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .beauty-cards-ch {
+          margin-top: 15px;
+          width: 16%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    //Home and Kitchen
+    .kitchen {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .kitchen-heading {
+        font-size: 28px;
+      }
+      .kitchen-cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .kitchen-cards-ch {
+          margin-top: 15px;
+          width: 16%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Image Slider Bottom
+    .image-slider-bottom {
+      width: 87.8%;
+      height: 436px;
+      margin: 20px auto;
+    }
+    // Brand Store
+    .brand-store {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .brand-store-heading {
+        font-size: 28px;
+        margin-top: 25px;
+      }
+      .brand-store-cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .brand-store-cards-ch {
+          margin-top: 15px;
+          width: 16%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Bottom Image
+    .bottom-img{
+      margin: 40px auto;
+      width: 77%;
+      height: auto;
+      // border: 1px solid red;
+      img{
+        width: 100%;
+      }
+  
+    }
+    // Bottom Disclaimer
+    .disclaimer-bottom{
+      width: 77%;
+      margin: 40px auto;
+      height: auto;
+      border: 1px solid rgb(211, 208, 208);
+      .disclaimer-ch{
+        width: 97%;
+        height: auto;
+        padding-bottom: 20px;
+        margin: auto;
+        h2{
+          font-size: 30px;
+          margin-top: 15px;
+        }
+        p{
+          margin-top: 10px;
+          font-size: 14px;
+          span{
+            color: #6aa019;
+            font-weight: 600;
+          }
+        }
+        button{
+          margin-top: 15px;
+          width: 110px;
+          height: 30px;
+          font-size: 15px;
+          border: 1px solid rgb(142, 142, 142);
+        }
+      }
+  
+    }
+  
+  }
+
+} 
+// =================================================================================================================== //
+// =================================================================================================================== //
+//small screen
+// =================================================================================================================== //
+// =================================================================================================================== //
+
+@media only screen and (max-width :719px){
+  .home-main {
+    max-width: 100%;
+    height: auto;
+    .container {
+      width: 100%;
+      height: auto;
+      margin: auto;
+      .image-slider-top {
+        width: 100%;
+        height: 436px;
+        // border: 1px solid red;
+      }
+      // Item Offer Section
+      .item-offers {
+        width: 77%;
+        height: 150px;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        margin: auto;
+        // border: 1px solid red;
+        .item-offers-ch {
+          width: 94%;
+          height: 50px;
+          margin-bottom: 20px;
+          border-radius: 9px;
+          // border: 1px solid red;
+          img {
+            width: 100%;
+            overflow: hidden;
+          }
+        }
+      }
+      // Bank Card Section // ===>
+      .bank-offers {
+        width: 77%;
+        height: auto;
+        margin: auto;
+        text-align: center;
+        // border: 1px solid red;
+        .bank-heading {
+          font-size: 18px;
+        }
+        .bank-cards {
+          width: 100%;
+          height: auto;
+          display: grid;
+          grid-template-rows: repeat(1,1fr);
+          margin: 20px auto;
+          box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+            rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+          justify-content: space-between;
+          // border: 1px solid blue;
+          border-top: 1.5px solid rgb(214, 211, 211);
+          .bank-cards-ch {
+            margin-top: 15px;
+            width: 94%;
+            height: auto;
+            &:hover {
+              box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            }
+          }
+        }
+      }
+  
+      .best-seller {
+        width: 77%;
+        height: auto;
+        margin: 50px auto;
+        text-align: center;
+        border: 1px solid red;
+        .best-seller-carousal{
+          width: 100%;
+          height: 360px;
+          margin: 20px auto;
+          border: 1px solid blue;
+        }
+      }
+    }
+    // Most Popular Section // ===>
+    .most-popular {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .popular-heading {
+        font-size: 28px;
+      }
+      .popular-cards {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .popular-cards-ch {
+          margin-top: 15px;
+          width: 94%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Top Offer Section // ===>
+    .top-offer {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .top-offer-heading {
+        font-size: 28px;
+      }
+      .top-offer-cards {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .top-offer-cards-ch {
+          margin-top: 15px;
+          width: 94%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Fruits and Vegetables
+    .fruits {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .fruits-heading {
+        font-size: 28px;
+      }
+      .fruits-cards {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .fruits-cards-ch {
+          margin-top: 15px;
+          width: 94%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Daily Staples
+    .daily-staples {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .daily-staples-heading {
+        font-size: 20px;
+      }
+      .daily-staples-cards {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .daily-staples-cards-ch {
+          margin-top: 15px;
+          width: 95%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Beverages
+    .beverages {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .beverages-heading {
+        font-size: 28px;
+      }
+      .beverages-cards {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .beverages-cards-ch {
+          margin-top: 15px;
+          width: 94%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Snacks Store
+    .snacks {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .snacks-heading {
+        font-size: 28px;
+      }
+      .snacks-cards {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .snacks-cards-ch {
+          margin-top: 15px;
+          width: 94%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Household
+    .household {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .household-heading {
+        font-size: 28px;
+      }
+      .household-cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .household-cards-ch {
+          margin-top: 15px;
+          width: 24.2%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Beauty and Hygine
+    .beauty {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .beauty-heading {
+        font-size: 28px;
+      }
+      .beauty-cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .beauty-cards-ch {
+          margin-top: 15px;
+          width: 16%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    //Home and Kitchen
+    .kitchen {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .kitchen-heading {
+        font-size: 28px;
+      }
+      .kitchen-cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .kitchen-cards-ch {
+          margin-top: 15px;
+          width: 16%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Image Slider Bottom
+    .image-slider-bottom {
+      width: 87.8%;
+      height: 436px;
+      margin: 20px auto;
+    }
+    // Brand Store
+    .brand-store {
+      width: 77%;
+      height: auto;
+      margin: auto;
+      text-align: center;
+      // border: 1px solid red;
+      .brand-store-heading {
+        font-size: 28px;
+        margin-top: 25px;
+      }
+      .brand-store-cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 2px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 2px 0px 0px 0px;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        border-top: 1.5px solid rgb(214, 211, 211);
+        .brand-store-cards-ch {
+          margin-top: 15px;
+          width: 16%;
+          height: auto;
+          border: 1px solid rgb(211, 208, 208);
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+      }
+    }
+    // Bottom Image
+    .bottom-img{
+      margin: 40px auto;
+      width: 77%;
+      height: auto;
+      // border: 1px solid red;
+      img{
+        width: 100%;
+      }
+  
+    }
+    // Bottom Disclaimer
+    .disclaimer-bottom{
+      width: 77%;
+      margin: 40px auto;
+      height: auto;
+      border: 1px solid rgb(211, 208, 208);
+      .disclaimer-ch{
+        width: 97%;
+        height: auto;
+        padding-bottom: 20px;
+        margin: auto;
+        h2{
+          font-size: 30px;
+          margin-top: 15px;
+        }
+        p{
+          margin-top: 10px;
+          font-size: 14px;
+          span{
+            color: #6aa019;
+            font-weight: 600;
+          }
+        }
+        button{
+          margin-top: 15px;
+          width: 110px;
+          height: 30px;
+          font-size: 15px;
+          border: 1px solid rgb(142, 142, 142);
+        }
+      }
+  
+    }
+  
+  }
+}
+// ======================================================================================================================== //
+// ======================================================================================================================== //
 // Single Card Carousal  ==> ProductCard
+// ======================================================================================================================== //
+// ======================================================================================================================== //
 .single-card {
   width: 19.5%;
   height: 360px;
@@ -342,6 +2140,98 @@
     border: 1px solid red;
     p{
       margin-right: 10px;
+    }
+  }
+}
+
+// ===================================================================================================================== //
+// ===================================================================================================================== //
+// Footer Section
+// ===================================================================================================================== //
+// ===================================================================================================================== //
+.footer-main{
+  max-width: 100%;
+  height: auto;
+  .footer-cont{
+    width: 77%;
+    margin: auto;
+    height: auto;
+    display: grid;grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    // border: 1px solid red;
+    div{
+      width: 95%;
+      padding: 20px auto;
+      // margin: auto 0px;
+      line-height: 35px;
+      // border: 1px solid blue;
+      .playstore-apps{
+        margin-top: 10px;
+        width: 130px;
+        padding: -30px auto;
+        height: 40px;
+        border-radius: 5px;
+        overflow: hidden;
+        // border: 1px solid red; 
+        img{
+          width: 100%;
+        }
+      }
+      .social{
+        display: flex;
+        margin: 25px 15px;
+        .facebook{
+          width: 20%;
+          height: auto;
+          .facebook-icon{
+            width: 50px;
+            height: 40px;
+            cursor: pointer;
+            color: rgb(73, 73, 172);
+          }
+        }
+        .pintrest{
+          width: 20%;
+          height: auto;
+          .pintrest-icon{
+            width: 50px;
+            height: 40px;
+            cursor: pointer;
+            color: rgb(211, 50, 50);
+          }
+        }
+        .twitter{
+          width: 20%;
+          height: auto;
+          .twitter-icon{
+            width: 50px;
+            height: 40px;
+            cursor: pointer;
+            color: rgb(62, 154, 191);
+          }
+        }
+        .instagram{
+          width: 20%;
+          height: auto;
+          .instagram-icon{
+            width: 50px;
+            height: 40px;
+            cursor: pointer;
+            color: rgb(216, 18, 22);
+          }
+        }
+      }
+    }
+    h6{
+      color: #84c225;
+    }
+    p{
+      font-size: 14px;
+      width: auto;
+      &:hover{
+        color: #84c225;
+        cursor: pointer;
+      }
     }
   }
 }
