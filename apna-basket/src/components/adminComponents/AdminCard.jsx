@@ -1,5 +1,6 @@
 import React from "react";
 import "../../Styling/Admin/admin.css";
+import { Link } from "react-router-dom";
 
 export const AdminCard = ({
   Image,
@@ -32,7 +33,9 @@ export const AdminCard = ({
             <p>
               <span className="spanHeading">Rating :</span> {rating}
             </p>
-            <button>Edit Item</button>
+            <button>
+            <Link to={`/edit/${id}`}>Edit Item</Link>
+            </button>
           </div>
         </div>
       </div>

@@ -15,10 +15,10 @@
   background-color: #84c225;
 }
 
-.adminSideBar div{
-    /* border: 1px solid red; */
-    padding: 1% 5%;
-    color: white;
+.adminSideBar div {
+  /* border: 1px solid red; */
+  padding: 1% 5%;
+  color: white;
 }
 
 .adminSideBar label {
@@ -82,13 +82,13 @@
 
 .adminGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5%;
   width: 85%;
   margin: auto;
 }
 
-@media only screen and (max-width: 880px) {
+@media only screen and (max-width: 150px) {
   .adminGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -98,10 +98,20 @@
   }
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 850px) {
   .adminGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5%;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .adminGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     gap: 1.5%;
     width: 80%;
     margin: auto;
@@ -133,6 +143,7 @@
   display: block;
   text-align: center;
   padding: 2%;
+  /* height: 300px; */
   transition: transform 0.5s;
 }
 
@@ -253,14 +264,14 @@
   display: flex;
   justify-content: space-between;
   padding: 0 2%;
-  font-size: 15px;
+  font-size: 12px;
   /* border: 1px solid red; */
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   margin-bottom: 3%;
 }
 
-.navLink{
+.navLink {
   display: flex;
   align-items: center;
   width: 30%;
@@ -271,10 +282,10 @@
 }
 
 .navLink p {
-    transition: transform 0.5s;
-    line-height: 58px;
-    /* width: 33.3%; */
-  }
+  transition: transform 0.5s;
+  /* line-height: 58px; */
+  /* width: 33.3%; */
+}
 
 .navLink p:hover {
   cursor: pointer;
@@ -286,4 +297,158 @@
   transform: scale(1.1);
   /* font-size: large; */
   /* background-color: #84c225; */
+}
+
+/* Statistics CSS here */
+
+.statHeading {
+  font-size: larger;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+.prodStat {
+  text-align: center;
+  display: block;
+  width: 80%;
+  padding: 2%;
+  font-weight: 500;
+  font-size: large;
+  margin: auto;
+  background-color: #84c225;
+  color: white;
+  border-radius: 8px;
+}
+
+.handleForm {
+  /* border: 1px solid red; */
+  width: 40%;
+  margin: auto;
+}
+
+.handleForm h1 {
+  font-size: 25px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.handleForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  border-radius: 8px;
+  align-items: center;
+  /* border: 1px solid grey; */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 20px;
+}
+
+.handleForm input {
+  border: 1px solid grey;
+  width: 90%;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.handleForm button {
+  background-color: #ffd54f;
+  width: 90%;
+  margin: 10px 0 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 20px -10px inset,
+    rgba(0, 0, 0, 0.3) 0px 10px 20px -9px inset;
+  border-radius: 8px;
+  padding: 2%;
+  font-size: large;
+  font-weight: 600;
+  margin-top: 1%;
+}
+
+.handleForm button:hover {
+  cursor: pointer;
+  background-color: #fff64f;
+}
+
+.editProductBox {
+  display: flex;
+  justify-content: space-between;
+  gap: 3%;
+  width: 85%;
+  margin: auto;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.editViewProduct {
+  /* border: 1px solid red; */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 8px;
+  /* margin-left: 15%; */
+  display: grid;
+  grid-template-columns: 70% 30%;
+  width: 40%;
+  /* max-height: 200px; */
+  /* justify-content: center; */
+  align-items: center;
+  /* padding: 2%; */
+}
+
+.editViewProduct h3 {
+  font-size: 23px;
+}
+
+.editItemImage {
+  /* border: 1px solid red; */
+  display: block;
+  /* width: 100%; */
+  margin: auto;
+}
+
+.editViewProduct button {
+  border: 1px solid #84c225;
+  transition: transform 0.5s;
+  padding: 2%;
+  font-weight: 500;
+  color: #84c225;
+  border-radius: 8px;
+}
+
+.editViewProduct button:hover {
+  cursor: pointer;
+  background-color: #84c225;
+  color: white;
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+.statsTable{
+  /* border: 1px solid red; */
+  margin: auto;
+}
+
+.statsTable th,
+td {
+  border-bottom: 1px solid #ddd;
+}
+
+.statsTable th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+.statsTable tr:hover {
+  background-color: #84c225;
+}
+
+.statsTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.statsTable th {
+  background-color: #84c225;
+  color: white;
 }
