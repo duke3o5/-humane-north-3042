@@ -43,7 +43,7 @@ export function FruitsVegesSlider(){
       )
     };
     return (
-      <div>
+      <div id="sliderF">
         <Slider {...settings}>
           <div>
             <img src="https://www.bigbasket.com/media/uploads/banner_images/L1-YXNP11805-1200X300-3rdJAN23.jpg" />
