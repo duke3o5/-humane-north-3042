@@ -1,11 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FiSearch } from 'react-fi'
+import { useSearchParams } from 'react-router-dom';
 import styled from 'styled-components'
 
-export const SideBar = () => {
-  // const [searchParams,setSearchParams]=useSearchParams();
-  // const [category,setCategory]=useState(searchParams.getAll('category')||[]);
-  // const [order,setOrder]=useState(searchParams.get('order')||'');
+export const SideBar = ({category,setCategory,price,setPrice}) => {
+  const [searchParams,setSearchParams]=useSearchParams();
+  const [search,setSearch]=useState('')
+  function filterFn(e){
+    let filteredCatg;
+    if(category.includes(e.target.value)){
+      filteredCatg=category.filter(el=>el!==e.target.value)
+    }else{
+      filteredCatg=[...category,e.target.value]
+    }
+
+    setCategory(filteredCatg)
+  }
+
+  function filterFnByPrice(e){
+    let filteredCatg;
+    if(price.includes(e.target.value)){
+      filteredCatg=price.filter(el=>el!==e.target.value)
+    }else{
+      filteredCatg=[...price,e.target.value]
+    }
+
+    setPrice(filteredCatg)
+  }
+
+  function searchFn(){
+    setSearchParams({q:search})
+    setSearch('')
+  }
 
 
   return (
@@ -14,29 +40,29 @@ export const SideBar = () => {
         <p>Brand</p>
         <hr />
         <div id='search'>
-          <input type="text" placeholder='Search by Brand' />
-          <div>
+          <input type="text" value={search} onChange={(e)=>setSearch(e.target.value)} placeholder='Search by Brand' />
+          <div onClick={searchFn}>
             <FiSearch width={'13px'}/>
           </div>
         </div>
         <label className='container'><h1>Organic</h1>
-          <input type="checkbox"/>
+          <input type="checkbox" value='Organic' onChange={filterFn} checked={category.includes('Organic')}/>
           <span className='checkmark'></span>
         </label>
         <label className='container'><h1>Fresho</h1>
-          <input type="checkbox"/>
+          <input type="checkbox" value='Fresho' onChange={filterFn} checked={category.includes('Fresho')}/>
           <span className='checkmark'></span>
         </label>
         <label className='container'><h1>USA</h1>
-          <input type="checkbox"/>
+          <input type="checkbox" value='USA' onChange={filterFn} checked={category.includes('USA')}/>
           <span className='checkmark'></span>
         </label>
         <label className='container'><h1>Hoovu Fresh</h1>
-          <input type="checkbox"/>
+          <input type="checkbox" value='Hoovu Fresh' onChange={filterFn} checked={category.includes('Hoovu Fresh')}/>
           <span className='checkmark'></span>
         </label>
         <label className='container'><h1>Gopalan Organic</h1>
-          <input type="checkbox"/>
+          <input type="checkbox" value='Gopalan Organic' onChange={filterFn} checked={category.includes('Gopalan Organic')}/>
           <span className='checkmark'></span>
         </label>
       </div>
@@ -45,23 +71,23 @@ export const SideBar = () => {
         <p>Price</p>
         <hr />
         <label className='container'><h1>Less than Rs 20</h1>
-          <input type="checkbox"/>
+          <input type="checkbox" value='Price_gte=1&Price_lte=20' onChange={filterFnByPrice} checked={price.includes('Price_gte=1&Price_lte=20')}/>
           <span className='checkmark'></span>
         </label>
         <label className='container'><h1>Rs 21 to Rs 50</h1>
-          <input type="checkbox"/>
+          <input type="checkbox" value='Price_gte=21&Price_lte=50' onChange={filterFnByPrice} checked={price.includes('Price_gte=21&Price_lte=50')}/>
           <span className='checkmark'></span>
         </label>
         <label className='container'><h1>Rs 51 to Rs 100</h1>
-          <input type="checkbox"/>
+          <input type="checkbox" value='Price_gte=51&Price_lte=100' onChange={filterFnByPrice} checked={price.includes('Price_gte=51&Price_lte=100')}/>
           <span className='checkmark'></span>
         </label>
         <label className='container'><h1>Rs 101 to Rs 200</h1>
-          <input type="checkbox"/>
+          <input type="checkbox" value='Price_gte=101&Price_lte=200' onChange={filterFnByPrice} checked={price.includes('Price_gte=101&Price_lte=200')}/>
           <span className='checkmark'></span>
         </label>
         <label className='container'><h1>More than Rs 201</h1>
-          <input type="checkbox"/>
+          <input type="checkbox" value='Price_gte=201&Price_lte=1000000' onChange={filterFnByPrice} checked={price.includes('Price_gte=201&Price_lte=1000000')}/>
           <span className='checkmark'></span>
         </label>
       </div>

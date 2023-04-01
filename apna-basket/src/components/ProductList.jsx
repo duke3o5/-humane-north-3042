@@ -1,39 +1,58 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import styled from 'styled-components'
 import van from '../assets/delivery-van.png'
 import { getProduct } from '../Redux/ProductReducer/action';
 import { ProductCard } from './ProductCard';
-import {Grid, Skeleton, SkeletonText, Spinner, Stack} from '@chakra-ui/react'
+import {Grid, Skeleton, Spinner} from '@chakra-ui/react'
 
-export const ProductList = () => {
+export const ProductList = ({order,setOrder}) => {
   const [searchParams]=useSearchParams();
   const location =useLocation()
-  const {products,isError,isLoading}=useSelector(state=>state.productReducer)
+  const {products,isLoading}=useSelector(state=>state.productReducer)
   const dispatch=useDispatch()
 
   console.log(products)
   useEffect(()=>{
+    let sort,order;
+    if(searchParams.get('order')==='asc2'){
+      sort='name';
+      order='asc'
+    }else if(searchParams.get('order')==='desc2'){
+      sort='category';
+      order='desc';
+    }else{
+      sort='Price';
+      order=searchParams.get('order');
+    }
+
     let obj={
       params:{
         category:searchParams.getAll('category'),
-        _sort:searchParams.get('order')&&'price',
-        _order:searchParams.get('order')
+        _sort:searchParams.get('order') && sort,
+        _order:order,
+        q:searchParams.get('q')
       }
     }
-    dispatch(getProduct())
+    dispatch(getProduct(obj))
   },[location.search])
+
+
+  function sortFn(e){
+    setOrder(e.target.value)
+  }
+
 
   return (
     <DIV>
       <box>
         <p>Fruits & Vegetables {isLoading?<Spinner size='xs' />:'('+products.length+')'}</p>
-        <select>
-          <option value="">Popularity</option>
-          <option value="">Price-Low to High</option>
-          <option value="">Price-High to Low</option>
-          <option value="">Alphabetical</option>
+        <select value={order} onChange={sortFn}>
+          <option value="desc2">Popularity</option>
+          <option value="asc">Price-Low to High</option>
+          <option value="desc">Price-High to Low</option>
+          <option value="asc2">Alphabetical</option>
         </select>
       </box>
       <p className="aboveGrid"><img src={van} /><span>ALL PRODUCTS</span></p><hr />

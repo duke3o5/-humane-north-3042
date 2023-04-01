@@ -3,22 +3,31 @@ import van from '../assets/delivery-van.png'
 import basket from '../assets/tool.png'
 import '../App.css'
 import styled from 'styled-components';
-// {
-//   "id": 2,
-//   "rating": 3,
-//   "name": "Potato",
-//   "Image": "https://www.bigbasket.com/media/uploads/p/s/40162469_6-fresho-potato-new-crop.jpg",
-//   "category": "Organic",
-//   "Price": 84.5,
-//   "CartQuantity": 0
-//   },
+import axios from 'axios';
+import { useToast } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 export const ProductCard = ({id,rating,name,Image,category,Price,Weight}) => {
+  
+  const toast=useToast();
+
+  function addCart(){
+    let obj={rating,name,Image,category,Price,Weight}
+    axios.post('https://big-basket-api.onrender.com/Cart',obj)
+    .then(()=>toast({
+      position:'top',
+      title: name,
+      description:'Added Successfully',
+      status: 'success',
+      duration: 3000,
+      isClosable: true,
+    }))
+  }
 
   return (
     <DIV>
     <div className='fNvCard'>
-      <img src={Image} style={{margin:'auto'}} />
+      <Link to={`/products/${id}`}><img src={Image} style={{margin:'auto',width:'90%'}} /></Link>
       <div style={{padding:'15px'}}>
         <p style={{textAlign:'left',color:'gray',fontSize:'11px'}}>{category}</p>
         <p style={{textAlign:'left',fontSize:'14px',marginBottom:'3px'}}>{name.substring(0,26)}</p>
@@ -32,7 +41,7 @@ export const ProductCard = ({id,rating,name,Image,category,Price,Weight}) => {
             <p style={{color:'gray',fontSize:'10px',textAlign:'left'}}>Standard Delivery: Tomorrow 9:00AM - 1:30PM</p>
           </div>
           <div>
-            <div id='button'>
+            <div id='button' onClick={addCart}>
               <h1 style={{fontWeight:'bold'}}>ADD</h1>
               <img style={{width:'20px',height:'15px'}} src={basket}/>
             </div>
