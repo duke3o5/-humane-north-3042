@@ -1,9 +1,456 @@
-.adminSideBar{
-    /* border: 1px solid red; */
+/* AdminSideBar Css Property */
+.adminSideBarHeading {
+  font-size: 25px;
+  text-align: center;
+}
+.adminSideBar {
+  /* border: 1px solid rgb(15, 0, 148); */
+  border-radius: 8px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 1%;
+  width: 85%;
+  background-color: #84c225;
 }
 
-.side-Table{
-    display: flex;
-    /* border: 1px solid red; */
-    /* grid-template-columns: 20%, 70%; */
+.adminSideBar div {
+  /* border: 1px solid red; */
+  padding: 1% 5%;
+  color: white;
+}
+
+.adminSideBar label {
+  /* color: white; */
+  margin-left: 3px;
+  /* padding: 0 1%; */
+}
+
+.adminSideBar input {
+  /* color: white; */
+}
+
+.buttonDiv {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.pageButton {
+  /* border: 1px solid #84c225; */
+  border: 1px solid #84c225;
+  transition: transform 0.5s;
+  padding: 0.5%;
+  font-weight: 500;
+  color: #84c225;
+  border-radius: 8px;
+}
+
+.pageButton:hover {
+  /* border: 1px solid #84c225; */
+  cursor: pointer;
+  background-color: #84c225;
+  color: white;
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1);
+}
+
+.side-Table {
+  display: flex;
+  /* border: 1px solid red; */
+  /* grid-template-columns: 20%, 70%; */
+}
+
+.table-sidebar-div {
+  /* border: 2px solid red; */
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+}
+
+/* AdminDataList CSS here */
+
+/* .mainDataListDiv{
+    border: 1px solid #84c225;
+    padding: 5px;
+} */
+
+.adminGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5%;
+  width: 85%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 150px) {
+  .adminGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5%;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .adminGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5%;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .adminGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5%;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .adminGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5%;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+/* .inputTag {
+  white-space: "normal";
+  word-wrap: "break-word";
+  background-color: red;
+} */
+
+/* AdminCard CSS here */
+
+.ProductCard {
+  /* border: 1px solid red; */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 8px;
+  display: block;
+  text-align: center;
+  padding: 2%;
+  /* height: 300px; */
+  transition: transform 0.5s;
+}
+
+.ProductCard h3 {
+  font-size: 18px;
+  font-weight: 500;
+  /* border: 1px solid red; */
+}
+
+.ProductCard button {
+  border: 1px solid #84c225;
+  transition: transform 0.5s;
+  padding: 2%;
+  font-weight: 500;
+  color: #84c225;
+  border-radius: 8px;
+}
+
+.ProductCard button:hover {
+  cursor: pointer;
+  background-color: #84c225;
+  color: white;
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.15);
+}
+
+.ProductCard:hover {
+  cursor: pointer;
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(0.97);
+  background-color: white;
+}
+
+.ProductCard img {
+  margin: auto;
+  /* border: 1px solid red; */
+}
+
+.prodctInsideDiv {
+  /* border: 1px solid #84c225; */
+  /* width: 60%; */
+  padding: 1% 3%;
+}
+
+.spanHeading {
+  /* border: 1px solid black; */
+  font-weight: 500;
+  color: #84c225;
+}
+
+.buttonratingDiv {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* AdminForm here */
+
+.adminForm {
+  /* border: 1px solid red; */
+  display: flex;
+  /* margin: auto; */
+}
+
+.form {
+  display: block;
+  /* border: 1px solid #84c225; */
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 10px;
+  padding: 1%;
+  width: 50%;
+  /* height: 500px; */
+  text-align: center;
+}
+.form input {
+  border: 1px solid grey;
+  padding: 2%;
+  width: 100%;
+  /* margin: 5%; */
+  margin: 2% -1% 0;
+  border-radius: 8px;
+}
+
+.form input:focus {
+  outline: none;
+}
+
+.form button {
+  background-color: #ffd54f;
+  width: 100%;
+  margin: 10px 0 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 20px -10px inset,
+    rgba(0, 0, 0, 0.3) 0px 10px 20px -9px inset;
+  border-radius: 8px;
+  padding: 2%;
+  font-size: large;
+  font-weight: 600;
+  margin-top: 2%;
+}
+
+.form button:hover {
+  cursor: pointer;
+  background-color: #fff64f;
+}
+
+.formHeading {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+/* AdminNavbar here */
+
+.adminNavbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2%;
+  font-size: 12px;
+  /* border: 1px solid red; */
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-bottom: 3%;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  font-weight: 500;
+  justify-content: space-between;
+  transition: transform 0.5s;
+  /* border: 1px solid red; */
+}
+
+.navLink p {
+  transition: transform 0.5s;
+  /* line-height: 58px; */
+  /* width: 33.3%; */
+}
+
+.navLink p:hover {
+  cursor: pointer;
+  /* padding: 2%; */
+  color: #84c225;
+  border-bottom: 3px solid #84c225;
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  /* font-size: large; */
+  /* background-color: #84c225; */
+}
+
+/* Statistics CSS here */
+
+.statHeading {
+  font-size: larger;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+.prodStat {
+  text-align: center;
+  display: block;
+  width: 80%;
+  padding: 2%;
+  font-weight: 500;
+  font-size: large;
+  margin: auto;
+  background-color: #84c225;
+  color: white;
+  border-radius: 8px;
+}
+
+.handleForm {
+  /* border: 1px solid red; */
+  width: 40%;
+  margin: auto;
+}
+
+.handleForm h1 {
+  font-size: 25px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.handleForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  border-radius: 8px;
+  align-items: center;
+  /* border: 1px solid grey; */
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 20px;
+}
+
+.handleForm input {
+  border: 1px solid grey;
+  width: 90%;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.handleForm button {
+  background-color: #ffd54f;
+  width: 90%;
+  margin: 10px 0 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 20px -10px inset,
+    rgba(0, 0, 0, 0.3) 0px 10px 20px -9px inset;
+  border-radius: 8px;
+  padding: 2%;
+  font-size: large;
+  font-weight: 600;
+  margin-top: 1%;
+}
+
+.handleForm button:hover {
+  cursor: pointer;
+  background-color: #fff64f;
+}
+
+.editProductBox {
+  display: flex;
+  justify-content: space-between;
+  gap: 3%;
+  width: 85%;
+  margin: auto;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.editViewProduct {
+  /* border: 1px solid red; */
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 8px;
+  /* margin-left: 15%; */
+  display: grid;
+  grid-template-columns: 70% 30%;
+  width: 40%;
+  /* max-height: 200px; */
+  /* justify-content: center; */
+  align-items: center;
+  /* padding: 2%; */
+  padding: 1%;
+  /* border: 1px solid red; */
+}
+
+.editViewProduct h3 {
+  font-size: 23px;
+}
+
+.editItemImage {
+  /* border: 1px solid red; */
+  display: block;
+  /* width: 100%; */
+  margin: auto;
+}
+
+.editViewProduct button {
+  border: 1px solid #84c225;
+  transition: transform 0.5s;
+  padding: 2%;
+  font-weight: 500;
+  color: #84c225;
+  border-radius: 8px;
+}
+
+.editViewProduct button:hover {
+  cursor: pointer;
+  background-color: #84c225;
+  color: white;
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+.statsTable{
+  /* border: 1px solid red; */
+  margin: auto;
+}
+
+.statsTable th,
+td {
+  border-bottom: 1px solid #ddd;
+}
+
+.statsTable th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+.statsTable tr:hover {
+  background-color: #84c225;
+}
+
+.statsTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.statsTable th {
+  background-color: #84c225;
+  color: white;
 }

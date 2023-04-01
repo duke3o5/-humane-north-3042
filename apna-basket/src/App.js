@@ -1,18 +1,25 @@
-import "./App.css";
-import { Footer } from "./components/Footer";
-import { Navbar } from "./components/Navbar";
-import { HomePage } from "./Pages/HomePage";
+
+import './App.css';
+import { FruitandVeg } from './Pages/FruitandVeg';
+import { Admin } from './Pages/Admin';
+import { Navbar } from './components/Navbar';
+import { HomePage } from './Pages/HomePage';
+import MainRoutes from './components/MainRoutes';
+
 
 function App() {
   return (
     <div className="App">
-      {/* <h1>Apna Basket</h1> */}
-      {/* <FruitandVeg/> */}
-      {/* <Admin/> */}
       <Navbar />
+
       <HomePage />
       <Footer />
+
+      <MainRoutes/>
+      {/* <FruitandVeg/> */}
+
       {/* <Admin/> */}
+      {/* <HomePage /> */}
     </div>
   );
 }
