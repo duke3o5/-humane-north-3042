@@ -13,7 +13,6 @@ function App() {
       {/* <FruitandVeg/> */}
       {/* <Admin/> */}
       {/* <HomePage /> */}
-      {/* <Admin/> */}
     </div>
   );
 }
