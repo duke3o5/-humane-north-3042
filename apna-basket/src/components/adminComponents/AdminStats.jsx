@@ -19,40 +19,7 @@ export const AdminStats = () => {
   }, []);
   return (
     <div>
-      <h1 className="statHeading">Products Statistics</h1>
-
-      {/* <div className="prodStat">
-        <h3>
-          Number of Food items in stock : <span>{Food.length}</span> -{" "}
-          <span>
-            In Percentage:{" "}
-            {Math.ceil( (Food.length*100)/
-              (Dairy.length + Food.length + Products.length)
-            )}
-          </span>
-          %
-        </h3>
-        <h3>
-          Number of Vegetables in stock: <span>{Products.length}</span> -{" "}
-          <span>
-            In Percentage:{" "}
-            {Math.ceil((Products.length*100)/
-              (Dairy.length + Food.length + Products.length)
-            )}
-          </span>
-          %
-        </h3>
-        <h3>
-          Number of Dairy products in stock: <span>{Dairy.length}</span> -{" "}
-          <span>
-            In Percentage:{" "}
-            {Math.ceil(( Dairy.length*100)/
-              (Dairy.length + Food.length + Products.length)
-            )}
-          </span>
-          %
-        </h3>
-      </div> */}
+      <h1 className="statHeading">Inventory Statistics</h1>
 
       <table className="statsTable">
         <tr>

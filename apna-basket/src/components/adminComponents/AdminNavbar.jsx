@@ -18,13 +18,13 @@ export const AdminNavbar = () => {
       </div>
       <div className="navLink">
         <Link to={"./admin"}>
-          <p>All Products</p>
+          <p>Products</p>
         </Link>
         <Link to={"/productForm"}>
-          <p>Add Product</p>
+          <p>Add New</p>
         </Link>
         <Link to={"/stats"}>
-          <p>Statistics</p>
+          <p>Inventory</p>
         </Link>
       </div>
     </div>
