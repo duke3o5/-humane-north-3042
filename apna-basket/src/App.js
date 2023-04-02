@@ -1,3 +1,4 @@
+
 import './App.css';
 import { FruitandVeg } from './Pages/FruitandVeg';
 import { Admin } from './Pages/Admin';
@@ -9,12 +10,13 @@ import Address from './Routes/Address';
 import PaymentPage from './Routes/Payment';
 
 
+
 function App() {
   return (
     <div className="App">
-      {/* <Navbar />
-      <MainRoutes/> */}
+
       {/* <FruitandVeg/> */}
+
       {/* <Admin/> */}
       {/* <LoginPages/> */}
       {/* <Address/> */}
