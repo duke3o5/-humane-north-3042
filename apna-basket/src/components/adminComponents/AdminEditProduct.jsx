@@ -43,6 +43,11 @@ export const AdminEditProduct = () => {
   }, []);
 
   return (
+
+    <>
+     <h1 style={{ marginBottom: "2%"}}>
+          Update item to see changes on admin side
+        </h1>
     <div className="editProductBox">
       {/* first div */}
 
@@ -74,9 +79,6 @@ export const AdminEditProduct = () => {
 
       {/* second div */}
       <div className="handleForm">
-        <h1 style={{ marginBottom: "2%"}}>
-          Update item to see changes on admin side
-        </h1>
         <h3 style={{ marginBottom: "2%", fontSize: "20px",textAlign: "center", color: "#84c225", fontWeight: "500px" }}>{success && "Data updated"}</h3>
 
         <form onSubmit={handleSubmit}>
@@ -118,6 +120,8 @@ export const AdminEditProduct = () => {
         </form>
       </div>
     </div>
+    </>
+
   );
 };
 
