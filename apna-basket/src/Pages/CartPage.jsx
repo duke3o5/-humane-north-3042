@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import "../Styling/User/cart.css"
 import axios from 'axios';
 import cart from '../assets/cart.png'
+import Nav from '../components/adminComponents/Navbar';
 
 const Cart = () => {
     const [cart,Cart]=useState([]);

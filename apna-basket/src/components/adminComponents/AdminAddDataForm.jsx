@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { AdminNavbar } from "./AdminNavbar";
 import { postAdminData } from "../../Redux/AdminReducer/action";
 import "../../Styling/Admin/admin.css";
 
@@ -33,6 +34,8 @@ export const AdminAddDataForm = () => {
   };
 
   return (
+    <>
+      <AdminNavbar/>
     <div className="adminForm">
       <form className="form" onSubmit={handleSubmit}>
       <h1 className="formHeading">Add Product</h1>
@@ -87,5 +90,7 @@ export const AdminAddDataForm = () => {
         </div>
       </form>
     </div>
+    </>
+
   );
 };

@@ -3,7 +3,8 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import van from '../assets/delivery-van.png'
-import styled from 'styled-components'
+import styled from 'styled-components';
+import Nav from '../components/adminComponents/Navbar';
 
 export const SingleProductPage = () => {
   const {id}=useParams(); 

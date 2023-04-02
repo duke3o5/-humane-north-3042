@@ -5,7 +5,8 @@ import styled from 'styled-components'
 import { SideBar } from '../components/SideBar'
 import { ProductList } from '../components/ProductList'
 import { useSelector } from 'react-redux'
-import { useSearchParams } from 'react-router-dom'
+import { useSearchParams } from 'react-router-dom';
+import Nav from '../components/adminComponents/Navbar';
 import { Box, Button, Center, Container } from '@chakra-ui/react'
 
 export const FruitandVeg = () => {

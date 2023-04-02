@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser } from "../Redux/AuthReducer/action";
 import axios from "axios";
+import Nav from '../components/adminComponents/Navbar';
 import {
   Box,
   Button,

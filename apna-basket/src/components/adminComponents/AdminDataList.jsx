@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { AdminSideBar } from "./AdminSideBar";
+import { AdminNavbar } from "./AdminNavbar";
 import { useDispatch, useSelector } from "react-redux";
 import { GetAdminData } from "../../Redux/AdminReducer/action";
 import { AdminCard } from "./AdminCard";
@@ -28,7 +29,8 @@ export const AdminDataList = () => {
   }, [location.search]);
 
   return (
-    <div className="mainDataListDiv">
+    <div className="mainDataListDiv" style={{marginBottom: "130px"}}>
+      <AdminNavbar/>
       {/* Sidebar imported here*/}
       <AdminSideBar />
 

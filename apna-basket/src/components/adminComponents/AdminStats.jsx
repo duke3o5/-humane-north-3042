@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { AdminNavbar } from "./AdminNavbar";
 import { useDispatch, useSelector } from "react-redux";
 import {
   adminAllDairy,
@@ -18,6 +19,8 @@ export const AdminStats = () => {
     dispatch(adminAllProducts);
   }, []);
   return (
+    <>
+    <AdminNavbar/>
     <div>
       <h1 className="statHeading">Inventory Statistics</h1>
 
@@ -61,5 +64,6 @@ export const AdminStats = () => {
         </tr>
       </table>
     </div>
+    </>
   );
 };
