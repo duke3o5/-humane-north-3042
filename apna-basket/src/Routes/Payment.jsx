@@ -247,10 +247,10 @@ function PaymentPage() {
             </Flex>
             <Box border="0px solid black" marginTop="5px">
               {" "}
-              {method === "Card" ? (
-                <CreditCard totalCartPrice={price}/>
-              ) : method === "Cod" ? (
+              {method === "Cod" ? (
                 <Cod totalCartPrice={price}/>
+              ) : method === "Card" ? (
+                <CreditCard totalCartPrice={price}/>
               ) : method === "Gift" ? (
                 <GiftCard totalCartPrice={price}/>
               ) : method === "Paytm" ? (

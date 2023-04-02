@@ -13,7 +13,6 @@ import {
   useToast,
 } from "@chakra-ui/react";
 // import { InfoIcon } from "@chakra-ui/icons";
-
 import { useDispatch, useSelector } from "react-redux";
 
 // import { CardImages } from "../../Utils/data/CardImages";
@@ -139,7 +138,7 @@ const CreditCard = ({totalCartPrice}) => {
         <InputGroup>
           <InputRightElement
             pointerEvents="none"
-            children={<img width={'40%'} src={InfoIcon} />}
+            children={<img width="40%" src={InfoIcon}/>}
           />
           <Input
             type="text"
