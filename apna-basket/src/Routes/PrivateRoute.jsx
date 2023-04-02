@@ -6,7 +6,7 @@ import { Navigate, useLocation } from "react-router-dom"
 const PrivateRoutes = ({children}) => 
 {
     const isAuth = useSelector((store) => store.AuthReducer.isAuth)
-   // console.log(isAuth)
+   console.log(isAuth)
     const location = useLocation()
     const Data = location.pathname || '/'
     if(!isAuth)
