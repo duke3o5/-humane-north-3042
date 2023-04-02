@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import React from "react";
 import Slider from "react-slick";
 
@@ -28,7 +29,7 @@ export function FruitsVegesSlider(){
       ),
       customPaging:i=>(
         
-       <div
+       <Box display={['none','none','none','block','block','block']}
           style={{
             width: "100px",
             padding:'8px 18px',
@@ -38,33 +39,33 @@ export function FruitsVegesSlider(){
           }}
         >
           {fruits[i]}
-        </div>
+        </Box>
        
       )
     };
     return (
-      <div id="sliderF">
+      <Box id="sliderF">
         <Slider {...settings}>
           <div>
-            <img src="https://www.bigbasket.com/media/uploads/banner_images/L1-YXNP11805-1200X300-3rdJAN23.jpg" />
+            <img style={{width:'100%'}} src="https://www.bigbasket.com/media/uploads/banner_images/L1-YXNP11805-1200X300-3rdJAN23.jpg" />
           </div>
           <div>
-            <img src="https://www.bigbasket.com/media/uploads/banner_images/YXNP14089-1200X300-16032023.jpg" />
+            <img style={{width:'100%'}} src="https://www.bigbasket.com/media/uploads/banner_images/YXNP14089-1200X300-16032023.jpg" />
           </div>
           <div>
-            <img src="https://www.bigbasket.com/media/uploads/banner_images/YXNP13041-1200X300-280223.jpg" />
+            <img style={{width:'100%'}} src="https://www.bigbasket.com/media/uploads/banner_images/YXNP13041-1200X300-280223.jpg" />
           </div>
           <div>
-            <img src="https://www.bigbasket.com/media/uploads/banner_images/YXNP13038-1200X300-280223.jpg" />
+            <img style={{width:'100%'}} src="https://www.bigbasket.com/media/uploads/banner_images/YXNP13038-1200X300-280223.jpg" />
           </div>
           <div>
-            <img src="https://www.bigbasket.com/media/uploads/banner_images/YXNP13035-1200X300-280223.jpg" />
+            <img style={{width:'100%'}} src="https://www.bigbasket.com/media/uploads/banner_images/YXNP13035-1200X300-280223.jpg" />
           </div>
           <div>
-            <img src="https://www.bigbasket.com/media/uploads/banner_images/YXNP13032-1200X300-280223.jpg" />
+            <img style={{width:'100%'}} src="https://www.bigbasket.com/media/uploads/banner_images/YXNP13032-1200X300-280223.jpg" />
           </div>
         </Slider>
-      </div>
+      </Box>
     );
 }
 
