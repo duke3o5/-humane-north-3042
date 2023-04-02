@@ -12,12 +12,25 @@ import { Button } from '@chakra-ui/button'
 import { FiSearch } from 'react-fi'
 import { Drawer, DrawerBody, DrawerContent, DrawerFooter, DrawerHeader } from '@chakra-ui/modal'
 import { useDisclosure } from '@chakra-ui/hooks'
-import { Input } from '@chakra-ui/input'
+import { Input } from '@chakra-ui/input';
+import {Logout} from '../../Redux/AuthReducer/action';
+import { useDispatch, useSelector } from "react-redux";
 
-const Nav = ({viewResume}) => {
+
+const Nav = () => {
   const [open, close]=useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const btnRef = useRef()
+  const btnRef = useRef();
+
+  const dispatch=useDispatch();
+
+  const isAuth = useSelector((store) => store.AuthReducer.isAuth)
+   console.log(isAuth);
+
+   const handleLogout=()=>{
+    dispatch(Logout);
+    console.log('HE')
+   }
 
   return (
   <>
@@ -101,7 +114,7 @@ const Nav = ({viewResume}) => {
                       </PopoverContent>
                     </Popover>
                     <li className="nav__item"><Link to='/cart'>{open?'Cart':<img width="35px"src={cart}/>}</Link></li>
-                    <li className="nav__item"><Link to='/login'>{open?'Sign In / Sign Up':<img width="30px"src={login}/>}</Link></li>
+                    <li className="nav__item"> {isAuth? <Button onClick={handleLogout}>Logout</Button> :<Link to={isAuth? "/":'/login'}>{ open?'Sign In / Sign Up':<img width="30px"src={login}/>}</Link>}</li>
                     </ul>
                 </nav>
             </div>
