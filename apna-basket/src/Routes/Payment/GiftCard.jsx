@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { useNavigate } from "react-router-dom";
 // import { successPayment } from "../../../redux/CartPage/action";
-const GiftCard = () => {
+const GiftCard = ({totalCartPrice}) => {
   const toast = useToast();
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -40,7 +40,7 @@ const GiftCard = () => {
 
 
   // const { totalCartPrice } = useSelector((state) => state.CartReducer);
-  const totalCartPrice=0;
+  // const totalCartPrice=0;
 
   if (loading) {
     return <Heading>loading....</Heading>;

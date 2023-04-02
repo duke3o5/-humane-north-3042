@@ -21,21 +21,15 @@ import Paytm from "./Payment/Paytm";
 import CreditCard from "./Payment/CreditCard";
 import GiftCard from "./Payment/GiftCard";
 import Cod from "./Payment/Cod";
-
-import { useSelector } from "react-redux";
+import { price } from "./Payment/Cod";
+import {cartCount} from "./Payment/Cod";
 
 function PaymentPage() {
-  const { Cart } = useSelector(
-    (state) => state.CartReducer
-  );
-//   const store = useSelector(
-//     (state) => console.log(state.CartReducer)
-//   );
-
-
-const ItemCount=3;
-const totalCartPrice=249;
-const deliveryAddress="";
+  const [Price, setPrice] =useState(price);
+  // console.log(cartCount);
+  // const ItemCount = 3;
+  // const price=249;
+  const deliveryAddress = "";
 
   const [method, setMethod] = useState("Card");
 
@@ -210,7 +204,7 @@ const deliveryAddress="";
                   >
                     Gift card
                   </Heading>
-                  <Text color="grey">One card for all Nykaa apps</Text>
+                  <Text color="grey">One card for all Apna Basket apps</Text>
                 </Flex>
                 {method === "Gift" && (
                   <Box border="0px solid red" margin="auto">
@@ -254,13 +248,13 @@ const deliveryAddress="";
             <Box border="0px solid black" marginTop="5px">
               {" "}
               {method === "Card" ? (
-                <CreditCard totalCartPrice={totalCartPrice} />
+                <CreditCard totalCartPrice={price}/>
               ) : method === "Cod" ? (
-                <Cod totalCartPrice={totalCartPrice} />
+                <Cod totalCartPrice={price}/>
               ) : method === "Gift" ? (
-                <GiftCard totalCartPrice={totalCartPrice} />
+                <GiftCard totalCartPrice={price}/>
               ) : method === "Paytm" ? (
-                <Paytm totalCartPrice={totalCartPrice} />
+                <Paytm totalCartPrice={price}/>
               ) : null}
             </Box>
           </Flex>
@@ -296,7 +290,7 @@ const deliveryAddress="";
                     <Heading as="h1" fontSize="16px">
                       Bag
                     </Heading>
-                    <Heading fontSize="14px">{ItemCount} Items</Heading>
+                    <Heading fontSize="14px">{cartCount} Items</Heading>
                   </Box>
                   <AccordionIcon />
                 </AccordionButton>
@@ -307,7 +301,7 @@ const deliveryAddress="";
                 justifyContent={"space-between"}
               >
                 <Flex flexDirection="column">
-                  <Text>{ItemCount} items in the Cart</Text>
+                  <Text>{cartCount} items in the Cart</Text>
                   <Heading as="h3" fontSize="large" fontWeight="medium">
                     Delivery address
                   </Heading>
@@ -333,28 +327,24 @@ const deliveryAddress="";
                     <Heading as="h1" fontSize="16px">
                       Price Details
                     </Heading>
-                    {
-                      <Heading fontSize="14px">
-                        ₹{totalCartPrice.toFixed(1)}
-                      </Heading>
-                    }
+                    {<Heading fontSize="14px">₹{price.toFixed(1)}</Heading>}
                   </Box>
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
                 <Text display={"flex"} justifyContent="space-between">
-                  <span>Bag MRP ({ItemCount} items)</span>
-                  <span>₹{totalCartPrice.toFixed(1)}</span>
+                  <span>Bag MRP ({cartCount} items)</span>
+                  <span>₹{price.toFixed(1)}</span>
                 </Text>
                 <Text display={"flex"} justifyContent="space-between">
                   <span>After Discount</span>
-                  <span>₹{totalCartPrice.toFixed(1)}</span>
+                  <span>₹{price.toFixed(1)}</span>
                 </Text>
                 <Text display={"flex"} justifyContent="space-between">
                   <span>Saving at this Time</span>
                   <span color="green">
-                    {totalCartPrice.toFixed(1) - totalCartPrice.toFixed(1)}
+                    {price.toFixed(1) - price.toFixed(1)}
                   </span>
                 </Text>
                 <Heading
@@ -363,7 +353,7 @@ const deliveryAddress="";
                   as="h1"
                   fontSize="16px"
                 >
-                  <span>You Pay</span> <span>₹{totalCartPrice.toFixed(1)}</span>{" "}
+                  <span>You Pay</span> <span>₹{price.toFixed(1)}</span>{" "}
                 </Heading>
               </AccordionPanel>
             </AccordionItem>

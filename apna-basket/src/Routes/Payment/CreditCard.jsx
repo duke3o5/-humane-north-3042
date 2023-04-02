@@ -44,7 +44,7 @@ export const CardImages = [
   },
 ];
 
-const CreditCard = () => {
+const CreditCard = ({totalCartPrice}) => {
   const toast = useToast();
   const [cardNumber, setcardNumber] = useState("");
   const [expiry, setExipry] = useState("");
@@ -62,6 +62,7 @@ const CreditCard = () => {
       alert("Expiry should be a valid number");
       return;
     }
+    // totalCartPrice
 
     if (cvv.length !== 3 && typeof Number(cvv) !== Number) {
       alert("invalid cvv number");
@@ -84,7 +85,7 @@ const CreditCard = () => {
   };
   
   // const { totalCartPrice } = useSelector((state) => state.CartReducer);
-const totalCartPrice=0;
+// const totalCartPrice=0;
   if (loading) {
     return <Heading>loading....</Heading>;
   }

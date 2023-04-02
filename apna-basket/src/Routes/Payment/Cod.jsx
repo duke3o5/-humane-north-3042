@@ -1,36 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { Flex, Heading, Button, useToast, Spinner } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  fetchcartaction,
-  fetchtoCart,
-  successPayment,
-} from "../../Redux/CartReducer/action";
 import axios from "axios";
-// import { successPayment } from "../../Redux/CartReducer/action"
+
+export let price = 0;
+export let cartCount = 0;
 
 const Cod = () => {
   const [cart, Cart] = useState([]);
   const [total, Total] = useState(0);
-  const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
-  // const store = useSelector((state) => state.CartReducer);
-  // const total = 0;
-  // console.log(store)
 
   const toast = useToast();
   const navigate = useNavigate();
 
-
   const HandleClick = () => {
     if (total > 0) {
       setLoading(true);
-      
 
       setTimeout(() => {
         setLoading(false);
-        dispatch(successPayment());
         navigate("/admin");
         toast({
           description: "Payment Successfully",
@@ -39,7 +28,6 @@ const Cod = () => {
           isClosable: true,
           position: "top-right",
         });
-        // dispatch(fetchcartaction);
       }, 2500);
     }
   };
@@ -53,18 +41,26 @@ const Cod = () => {
   // console.log(cart);
   useEffect(() => {
     getCart();
-  }, []);
+  }, [cart]);
 
   useEffect(() => {
     let sum = 0;
     cart.forEach((el) => (sum += el.Price * el.qty));
     Total(sum);
+    price = total;
+    // console.log(price);
+    cartCount = cart.length;
   }, [cart]);
 
-  // console.log(total);
-
   if (loading) {
-    return <Spinner marginTop={"90px"} marginRight={"30px"} size={"xl"} color="green"/>;
+    return (
+      <Spinner
+        marginTop={"90px"}
+        marginRight={"30px"}
+        size={"xl"}
+        color="green"
+      />
+    );
   }
   return (
     <Flex
