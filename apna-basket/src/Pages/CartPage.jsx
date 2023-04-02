@@ -134,7 +134,7 @@ const Cart = () => {
                         <h4>Total Amount</h4>
                         <h4>₹ <span id="tamnt">{total-cpn}</span></h4>
                     </div>
-                    <button onClick={()=>navigate('/products')}>PLACE ORDER</button>
+                    <button onClick={()=>navigate('/address')}>PLACE ORDER</button>
                 </div>
             </div>
         </div>

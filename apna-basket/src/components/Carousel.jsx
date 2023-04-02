@@ -44,7 +44,8 @@ export function FruitsVegesSlider(){
       )
     };
     return (
-      <Box id="sliderF">
+      <Box id="sliderF"
+      >
         <Slider {...settings}>
           <div>
             <img style={{width:'100%'}} src="https://www.bigbasket.com/media/uploads/banner_images/L1-YXNP11805-1200X300-3rdJAN23.jpg" />
