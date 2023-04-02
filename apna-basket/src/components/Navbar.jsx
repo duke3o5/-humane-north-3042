@@ -6,7 +6,7 @@ import {
   MdPersonOutline,
   MdPhone,
 } from "react-icons/md";
-import {BsTagFill} from 'react-icons/bs'
+import { BsTagFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import Cart from "../Images/Cart.png";
 import logo from "../Images/main_logo.jpg";

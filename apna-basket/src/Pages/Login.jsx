@@ -51,7 +51,7 @@ export const Login = () => {
               item.password === formValues.password
             );
           });
-           if (login) {
+          if (login) {
             dispatch(SetUserDataAfterLogin(login));
             toast({
               position: "top",
@@ -114,21 +114,22 @@ export const Login = () => {
           </FormControl>
           <Button
             type="submit"
+            backgroundColor={"#84c225"}
+            color={"white"}
             isLoading={isLoading}
             loadingText="Logging in..."
-            colorScheme="blue"
+            // colorScheme="blue"
           >
             Log In
           </Button>
-          <br />
+          {/* <br />
           <Link
             href="/signup"
             textAlign="center"
-            color="blue.500"
             _hover={{ textDecoration: "underline" }}
           >
             Sign Up
-          </Link>
+          </Link> */}
         </Stack>
       </form>
     </Box>

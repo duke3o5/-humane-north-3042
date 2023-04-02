@@ -1,3 +1,4 @@
+
 import { types } from "./actionType";
 import {
   getLocalStorageItem,
@@ -35,10 +36,12 @@ export const reducer = (state = initialState, { type, payload }) => {
       };
     }
     case types.ADD_USER_LOADING: {
+
       return {
         ...state,
         isLoading: true,
       };
+
     }
     case types.ADD_USER_SUCCESS: {
       return {
@@ -52,6 +55,7 @@ export const reducer = (state = initialState, { type, payload }) => {
         isLoading: false,
         isError: true,
       };
+
     }
     case types.GET_USER_LOADING: {
       return {
@@ -83,3 +87,4 @@ export const reducer = (state = initialState, { type, payload }) => {
 // //   initialState.userData = userData;
 // //   initialState.isAuth = true;
 // // }
+

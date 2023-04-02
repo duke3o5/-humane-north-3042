@@ -1,24 +1,32 @@
 import React, { useState } from 'react';
 import van from '../assets/delivery-van.png'
-import basket from '../assets/tool.png'
-import '../App.css'
+import basket from '../assets/tool.png';
 import styled from 'styled-components';
-// {
-//   "id": 2,
-//   "rating": 3,
-//   "name": "Potato",
-//   "Image": "https://www.bigbasket.com/media/uploads/p/s/40162469_6-fresho-potato-new-crop.jpg",
-//   "category": "Organic",
-//   "Price": 84.5,
-//   "CartQuantity": 0
-//   },
+import axios from 'axios';
+import {Box, useToast } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 export const ProductCard = ({id,rating,name,Image,category,Price,Weight}) => {
+  
+  const toast=useToast();
+
+  function addCart(){
+    let obj={rating,name,Image,category,Price,Weight,qty:1}
+    axios.post('https://big-basket-api.onrender.com/Cart',obj)
+    .then(()=>toast({
+      position:'top',
+      title: name,
+      description:'Added Successfully',
+      status: 'success',
+      duration: 3000,
+      isClosable: true,
+    }))
+  }
 
   return (
     <DIV>
-    <div className='fNvCard'>
-      <img src={Image} style={{margin:'auto'}} />
+    <Box className='fNvCard'>
+      <Link to={`/products/${id}`}><img src={Image} style={{margin:'auto',width:'90%'}} /></Link>
       <div style={{padding:'15px'}}>
         <p style={{textAlign:'left',color:'gray',fontSize:'11px'}}>{category}</p>
         <p style={{textAlign:'left',fontSize:'14px',marginBottom:'3px'}}>{name.substring(0,26)}</p>
@@ -32,14 +40,14 @@ export const ProductCard = ({id,rating,name,Image,category,Price,Weight}) => {
             <p style={{color:'gray',fontSize:'10px',textAlign:'left'}}>Standard Delivery: Tomorrow 9:00AM - 1:30PM</p>
           </div>
           <div>
-            <div id='button'>
+            <div id='button' onClick={addCart}>
               <h1 style={{fontWeight:'bold'}}>ADD</h1>
               <img style={{width:'20px',height:'15px'}} src={basket}/>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </Box>
     </DIV>
   )
 }
@@ -50,7 +58,7 @@ const DIV=styled.div`
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   }
   .fNvCard{
-    width:227px;box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
     margin-bottom:35px;
     padding-top:10px
   }
