@@ -6,6 +6,8 @@ import axios from 'axios';
 import cart from '../assets/cart.png'
 import Nav from '../components/adminComponents/Navbar';
 
+
+
 const Cart = () => {
     const [cart,Cart]=useState([]);
     const [total,Total]=useState(0);
