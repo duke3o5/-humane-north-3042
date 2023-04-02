@@ -298,8 +298,12 @@ export const HomePage = () => {
     <div className="home-main">
       <div className="container">
         {/* Image slider */}
-        <div className="image-slider-top">
+        {/* <div className="image-slider-top">
           <HomePageSlider />
+        </div> */}
+
+        <div>
+          <img width={"100%"} src={"https://www.bigbasket.com/media/uploads/banner_images/YXHP144_hp_fom_m_bbpl-staples_460_270323_Bangalore.jpg"}/>
         </div>
         {/* Item Offers */}
         <div className="item-offers">
@@ -331,12 +335,12 @@ export const HomePage = () => {
           </div>
         </div>
         {/* Best Seller ==> The carousal Part */}
-        <div className="best-seller">
+        {/* <div className="best-seller">
           <h5>Best Seller</h5>
           <div className="best-seller-carousal">{<MultipleItems>
             
             </MultipleItems>}</div>
-        </div>
+        </div> */}
         {/* Most Popular */}
         <div className="most-popular">
           <div className="popular-heading">
