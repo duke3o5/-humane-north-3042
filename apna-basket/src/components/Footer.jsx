@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <div className="footer-main">
+    <div className="footer-main" style={{marginTop:'50px'}}>
       <div className="footer-cont">
         <div>
           <h6>bigbasket</h6>
