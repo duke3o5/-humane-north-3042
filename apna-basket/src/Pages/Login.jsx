@@ -122,14 +122,16 @@ export const Login = () => {
           >
             Log In
           </Button>
-          {/* <br />
+          <br />
           <Link
+            color={'#84c225'}
+            textDecoration={'none'}
             href="/signup"
             textAlign="center"
-            _hover={{ textDecoration: "underline" }}
+            cursor={'pointer'}
           >
             Sign Up
-          </Link> */}
+          </Link>
         </Stack>
       </form>
     </Box>

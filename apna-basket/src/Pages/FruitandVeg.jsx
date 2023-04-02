@@ -30,7 +30,7 @@ export const FruitandVeg = () => {
     </h1>:
     <Box w={['95%','95%','95%','95%','90%','77%']}m={'auto'}>
       <P>{'HOME> FRUITS & VEGETABLES'}</P>
-      <FruitsVegesSlider/>
+      {/* <FruitsVegesSlider/> */}
       <DIV>
           <SideBar category={category} setCategory={setCategory} price={price} setPrice={setPrice}/>
           <ProductList order={order} setOrder={setOrder} p={p} category={category} setCategory={setCategory} price={price} setPrice={setPrice}/>
