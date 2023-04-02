@@ -12,13 +12,14 @@ import {
   InputRightElement,
   useToast,
 } from "@chakra-ui/react";
-import { InfoIcon } from "@chakra-ui/icons";
+// import { InfoIcon } from "@chakra-ui/icons";
 
 import { useDispatch, useSelector } from "react-redux";
 
 // import { CardImages } from "../../Utils/data/CardImages";
 
 import { useNavigate } from "react-router-dom";
+const InfoIcon ="https://cdn-icons-png.flaticon.com/512/471/471713.png";
 // import { successPayment } from "../../../redux/CartPage/action";
 
 export const CardImages = [
@@ -138,7 +139,7 @@ const CreditCard = ({totalCartPrice}) => {
         <InputGroup>
           <InputRightElement
             pointerEvents="none"
-            children={<InfoIcon color="gray.300" />}
+            children={<img width={'40%'} src={InfoIcon} />}
           />
           <Input
             type="text"

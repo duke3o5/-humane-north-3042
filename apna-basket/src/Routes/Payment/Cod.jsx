@@ -20,14 +20,15 @@ const Cod = () => {
 
       setTimeout(() => {
         setLoading(false);
-        navigate("/admin");
+        
         toast({
           description: "Payment Successfully",
           status: "success",
           duration: 5000,
           isClosable: true,
-          position: "top-right",
+          position: "top",
         });
+        navigate("/");
       }, 2500);
     }
   };

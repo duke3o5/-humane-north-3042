@@ -1,31 +1,14 @@
-
-import { FruitandVeg } from './Pages/FruitandVeg';
-import { Admin } from './Pages/Admin';
-import { Navbar } from './components/Navbar';
-import { HomePage } from './Pages/HomePage';
 import MainRoutes from './components/MainRoutes';
 
-import Cart from './Pages/CartPage';
-
-import LoginPages from './Routes/LoginPages';
-import Address from './Routes/Address';
-import PaymentPage from './Routes/Payment';
-
-
-
-
+import { Footer } from './components/Footer';
+import Nav from './components/adminComponents/Navbar';
 
 function App() {
   return (
     <div className="App">
-
-      {/* <FruitandVeg/> */}
-
-      {/* <Admin/> */}
-      {/* <LoginPages/> */}
-      {/* <Address/> */}
-      <PaymentPage/>
-      {/* <HomePage /> */}
+      <Nav/>
+      <MainRoutes/>
+      <Footer/>
     </div>
   );
 }
