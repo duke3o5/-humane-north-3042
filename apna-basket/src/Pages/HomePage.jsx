@@ -7,6 +7,7 @@ import HomePageSlider, {
 } from "../components/HomePageSlider";
 import { ProductCard } from "../components/ProductCard";
 import "../style.scss";
+import Nav from '../components/adminComponents/Navbar';
 
 const items_offers_imgs = [
   {

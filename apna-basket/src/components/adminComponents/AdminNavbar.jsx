@@ -13,11 +13,9 @@ export const AdminNavbar = () => {
   }
   return (
     <div className="adminNavbar">
-      <div onClick={()=>handlePage('/admin')} style={{cursor: 'pointer'}}>
-        <img src={logo} alt="borken logo" />
-      </div>
+     
       <div className="navLink">
-        <Link to={"./admin"}>
+        <Link to={"/admin"}>
           <p>Products</p>
         </Link>
         <Link to={"/productForm"}>

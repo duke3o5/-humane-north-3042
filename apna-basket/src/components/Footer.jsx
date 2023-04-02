@@ -5,7 +5,6 @@ import {
   Box,
   chakra,
   Container,
-  Link,
   SimpleGrid,
   Stack,
   Text,
@@ -16,6 +15,7 @@ import {
 } from '@chakra-ui/react';
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { BiMailSend } from 'react-icons/bi';
+import {Link, useNavigate} from 'react-router-dom';
 
 const Logo = (props) => {
   return (
@@ -72,6 +72,8 @@ const ListHeader = ({ children }) => {
 };
 
 export const Footer=()=> {
+
+  const navigate= useNavigate();
   return (
     <Box
       bg={useColorModeValue("#f6ffe9")}
@@ -102,6 +104,7 @@ export const Footer=()=> {
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Company</ListHeader>
+            <Link to='/admin'>Admin</Link>
             <Link href={'#'}>About us</Link>
             <Link href={'#'}>Blog</Link>
             <Link href={'#'}>Contact us</Link>
