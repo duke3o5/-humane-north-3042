@@ -6,4 +6,5 @@ import {reducer as AuthReducer } from './AuthReducer/reducer';
 
 const rootReducer = combineReducers({ AdminReducer, productReducer,AuthReducer });
 
-export const store = legacy_createStore(rootReducer, applyMiddleware(thunk))
+
+export const store = legacy_createStore(rootReducer, applyMiddleware(thunk));
