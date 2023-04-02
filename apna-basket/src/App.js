@@ -1,9 +1,10 @@
-import './App.css';
+
 import { FruitandVeg } from './Pages/FruitandVeg';
 import { Admin } from './Pages/Admin';
 import { Navbar } from './components/Navbar';
 import { HomePage } from './Pages/HomePage';
 import MainRoutes from './components/MainRoutes';
+import Cart from './Pages/CartPage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       {/* <Admin/> */}
       {/* <HomePage /> */}
       {/* <Admin/> */}
+      {/* <Cart/> */}
     </div>
   );
 }
