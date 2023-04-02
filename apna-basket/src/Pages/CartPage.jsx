@@ -5,6 +5,8 @@ import "../Styling/User/cart.css"
 import axios from 'axios';
 import cart from '../assets/cart.png'
 
+
+
 const Cart = () => {
     const [cart,Cart]=useState([]);
     const [total,Total]=useState(0);
