@@ -12,7 +12,7 @@ export const SingleProductPage = () => {
 
 
   function addCart(){
-    let obj={...data}
+    let obj={...data,qty:1}
     axios.post('https://big-basket-api.onrender.com/Cart',obj)
     .then(()=>toast({
       position:'top',
@@ -133,7 +133,6 @@ const DIV=styled.div`
 
   @media all and (max-width:1024px){
     padding:20px 20px;
-    flex-direction:column;
     grid-template-columns:repeat(1,1fr);
     gap:50px;
     div:last-child{

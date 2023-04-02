@@ -19,7 +19,6 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { useNavigate } from "react-router-dom";
 const InfoIcon ="https://cdn-icons-png.flaticon.com/512/471/471713.png";
-
 // import { successPayment } from "../../../redux/CartPage/action";
 
 export const CardImages = [

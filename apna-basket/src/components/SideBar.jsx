@@ -29,7 +29,7 @@ export const SideBar = ({category,setCategory,price,setPrice}) => {
   }
 
   function searchFn(){
-    setSearchParams({q:search})
+    setSearchParams({q:search||'Organic'})
     setSearch('')
   }
 
@@ -179,6 +179,12 @@ export const SideBar = ({category,setCategory,price,setPrice}) => {
 const DIV=styled.div`
 width: 22%;
 padding: 15px;
+display:'block';
+
+@media all and (max-width:1160px){
+  display:none
+  
+}
 
   .bar{
     margin-bottom: 40px;

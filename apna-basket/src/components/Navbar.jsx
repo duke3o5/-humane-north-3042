@@ -18,7 +18,7 @@ export const Navbar = () => {
     <div className="nav-main">
       <div className="container-top">
         <div className="main-logo">
-          <Link>
+          <Link to={'/'}>
             <img src={logo} alt="" />
           </Link>
         </div>
@@ -35,7 +35,7 @@ export const Navbar = () => {
             </div>
             <div className="login-signup-main">
               <MdPersonOutline className="user-icon" />
-              <Link style={{ textDecoration: "none", color: "black" }}>
+              <Link to={'/login'} style={{ textDecoration: "none", color: "black" }}>
                 <p>Login/ Sign Up</p>
               </Link>
             </div>
@@ -48,8 +48,8 @@ export const Navbar = () => {
               </div>
             </div>
             <div className="add-to-cart">
+              <Link to={'/cart'} style={{ textDecoration: "none", color: "black" }}>
               <img src={Cart} alt="" />
-              <Link style={{ textDecoration: "none", color: "black" }}>
                 <p>
                   <b>M</b>y <b>B</b>asket <br /> <b>0</b> Items
                 </p>
@@ -60,10 +60,12 @@ export const Navbar = () => {
       </div>
       {/* Nav- Bottom */}
       <div className="container-bottom">
+        <Link to={'/products'}>
         <div className="bottom-nav-left">
           <h4>SHOP BY CATEGORY</h4>
           <MdExpandMore className="category-dropdown" />
         </div>
+        </Link>
         <div className="bottom-nav-right">
           <BsTagFill className="offer-tag-icon" />
           <p>OFFERS</p>

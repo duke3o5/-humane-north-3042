@@ -40,7 +40,7 @@ export const AdminDataList = () => {
             emptyColor="green.200"
             color="#84c225"
             size="xl"
-            style={{alignItems:"center", margin:"auto"}}
+            style={{ alignItems: "center", margin: "auto" }}
           />
         ) : (
           Products.map((el, i) => <AdminCard key={i} {...el} id={el.id} />)

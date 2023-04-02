@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import van from '../assets/delivery-van.png'
-import basket from '../assets/tool.png'
-import '../App.css'
+import basket from '../assets/tool.png';
 import styled from 'styled-components';
 import axios from 'axios';
-import { useToast } from '@chakra-ui/react';
+import {Box, useToast } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
 export const ProductCard = ({id,rating,name,Image,category,Price,Weight}) => {
@@ -12,7 +11,7 @@ export const ProductCard = ({id,rating,name,Image,category,Price,Weight}) => {
   const toast=useToast();
 
   function addCart(){
-    let obj={rating,name,Image,category,Price,Weight}
+    let obj={rating,name,Image,category,Price,Weight,qty:1}
     axios.post('https://big-basket-api.onrender.com/Cart',obj)
     .then(()=>toast({
       position:'top',
@@ -26,7 +25,7 @@ export const ProductCard = ({id,rating,name,Image,category,Price,Weight}) => {
 
   return (
     <DIV>
-    <div className='fNvCard'>
+    <Box className='fNvCard'>
       <Link to={`/products/${id}`}><img src={Image} style={{margin:'auto',width:'90%'}} /></Link>
       <div style={{padding:'15px'}}>
         <p style={{textAlign:'left',color:'gray',fontSize:'11px'}}>{category}</p>
@@ -48,7 +47,7 @@ export const ProductCard = ({id,rating,name,Image,category,Price,Weight}) => {
           </div>
         </div>
       </div>
-    </div>
+    </Box>
     </DIV>
   )
 }
@@ -59,7 +58,7 @@ const DIV=styled.div`
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   }
   .fNvCard{
-    width:227px;box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
     margin-bottom:35px;
     padding-top:10px
   }
