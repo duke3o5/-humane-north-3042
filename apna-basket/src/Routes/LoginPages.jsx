@@ -74,7 +74,7 @@ export default function LoginPages() {
   };
 
   return (
-    <Box bgColor={"#84C225"} maxH={"sm"}>
+    <Box bgColor={"#84C225"}>
       {/* <Container maxW='6xl'  centerContent border={"2px solid red"} borderRadius="8px" padding={"10px 50px "}> */}
       <Stack
         m="auto"

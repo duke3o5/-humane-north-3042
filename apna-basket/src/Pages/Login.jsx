@@ -23,11 +23,11 @@ export const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const state = location.state || { data: "/" };
-  console.log(state.data);
+  // console.log(state.data);
   const toast = useToast();
   const dispatch = useDispatch();
   const { isLoading, isError } = useSelector((state) => {
-    console.log(state.AuthReducer);
+    // console.log(state.AuthReducer);
     return state.AuthReducer;
   });
 
