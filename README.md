@@ -11,6 +11,7 @@ BigBasket is India's biggest e-grocer. It offers tens of thousands of different 
 4. ReactJS<br/>
 5. ReduxJS<br/>
 6. ChakraUI<br/>
+7. JSON Server<br/>
 <br/><br/>
 # Contributors:<br/>
 1. Deepak Kumar (Admin Panel, Address Page, Checkout Page)<br/>
