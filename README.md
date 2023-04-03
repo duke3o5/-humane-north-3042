@@ -5,14 +5,13 @@ BigBasket is India's biggest e-grocer. It offers tens of thousands of different 
 <br/>
 
 # Tech Stacks:<br/>
-
-  <li>HTML</li>
-  <li>CSS</li>
-  <li>JavaScript</li>
-  <li>ReactJS</li>
-  <li>ReduxJS</li>
-  <li>Chakra UI</li>
-<br/>
+1. HTML<br/>
+2. CSS<br/>
+3. JavaScript<br/>
+4. ReactJS<br/>
+5. ReduxJS<br/>
+6. ChakraUI<br/>
+<br/><br/>
 # Contributors:<br/>
 1. Deepak Kumar (Admin Panel, Address Page, Checkout Page)<br/>
 2. Anubhav Dixit (Products Page, Single Product Page, Navbar, Cart Page)<br/>
