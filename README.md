@@ -3,8 +3,16 @@
 # About Project: <br/>
 BigBasket is India's biggest e-grocer. It offers tens of thousands of different products, including fruits and vegetables, meats, spices, toiletries, baby products and pet food.
 <br/>
-<br/>
 
+# Tech Stacks:<br/>
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>ReactJS</li>
+  <li>ReduxJS</li>
+  <li>Chakra UI</li>
+</ul>
 # Contributors:<br/>
 1. Deepak Kumar (Admin Panel, Address Page, Checkout Page)<br/>
 2. Anubhav Dixit (Products Page, Single Product Page, Navbar, Cart Page)<br/>
